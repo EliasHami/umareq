@@ -1,81 +1,217 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import royalJson from '/src/data/royal.json';
+import Footer from '../components/Footer.astro';
+  
+if (!royalJson) {
+    // deal with error...
+}
+
+const accueil = royalJson['accueil'];
+
+const stores = royalJson['products'];
+
+console.log({stores})
+const categories = Object.keys(stores);
 ---
 
-<Layout title="ROYAL - SMART APPLIANCES">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="ROYAL - SMART APPLIANCES" categories={categories}>
+	<!-- SECTION -->
+<div class="section" style="background: #eeeeee">
+  <!-- container -->
+  <div class="container">
+      <!-- row -->
+      <div class="row">
+          <!-- shop -->
+          { categories.map(category => {
+              const img = accueil['img'][category];
+              return (
+                
+              <div class="col-md-4 col-xs-6 logo-separator">
+                  <div>
+                      <img src="img/royal_2.png">
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                  <a href={`store?category=${category}`} class="cta-btn">
+                      <div class="shop">
+                          <div class="shop-img">
+                              <img src={img} alt="">
+                          </div>
+                          <div class="shop-body">
+                              <h3>{category.toUpperCase()}</h3>
+                          </div>
+                      </div>
+                  </a>
+              </div>)
+          })}
+
+          <!-- /shop -->
+      </div>
+      <!-- /row -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- HOT DEAL SECTION -->
+<div id="hot-deal" class="section">
+  <!-- container -->
+  <div class="container">
+      <!-- row -->
+      <div class="row">
+          <div class="col-md-12">
+              <div class="hot-deal">
+                  <p style="color: #f5f5f5; text-shadow: #222 5px 0 10px;font-weight: 700;">Ne ratez pas l'occasion</p>
+                  <h2 class="text-uppercase" style="color: #ffff00; text-shadow: #222 5px 0 10px;">Passez votre commande</h2>
+                  <a class="primary-btn cta-btn" href="contact.php">Commander</a>
+              </div>
+          </div>
+      </div>
+      <!-- /row -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /HOT DEAL SECTION -->
+<!-- /SECTION -->
+<div class="section">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div id="product-tab">
+                  <!-- product tab nav -->
+                  <ul class="tab-nav">
+                      <li class="active"><a data-toggle="tab" href="#tab1" <div>
+                          <img src="img/royal_b.png">
+                          </div>
+                  </ul>
+                  <!-- product tab content -->
+                  <div class="tab-content">
+                      <!-- tab2  -->
+                      <div id="tab1" class="tab-pane fade in active">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <p class="def">La marque ROYAL n’a cessé depuis plusieurs décennies d’afficher une croissance soutenue sur une
+                                      gamme domestique élargie.
+                                      Son histoire est riche et ponctué par des événements exceptionnels comme l’introduction de la 1ère
+                                      machine à laver économique au Maroc. La marque citoyenne a fortement influancé le mode de vie
+                                      des ménagères qui pouvaient enfin arrêter le pénible lavage à la main et s’offrir la machine à laver
+                                      royal, une machine à la fois très accessible et robuste. Le fameux slogan « Baraka man lfaraka » lance
+                                      alors l’incroyable épopée de la marque Royal au Maroc.
+                                      Depuis la gamme s’est élargie avec une commercialisation complète en lavage, froid, cuisson,
+                                      encastrable et petit électroménager. Issue des plus grands producteurs Mondiaux dans le domaine et
+                                      réputé pour sa robuste, la marque Royal s’est donc positionné au fil du temps comme un produit de
+                                      qualité a un prix très attrayant.
+                                      Ce pôle représente l’activité historique du groupe et peut se vanter d’une collaboration avec plus de
+                                      200 points de ventes à travers le pays. A lui seul ce pôle compte plus de 70 employés.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- /tab2  -->
+
+                  </div>
+                  <!-- /product tab content  -->
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- SECTION -->
+<div class="section">
+  <!-- container -->
+  <div class="container">
+      <!-- row -->
+      <div class="row">
+
+          <!-- section title -->
+          <div class="col-md-12">
+              <div class="section-title">
+                  <h3 class="title">Les produits de la gamme ROYAL</h3>
+                  <div class="section-nav">
+                      <ul class="section-tab-nav tab-nav">
+                        {
+                          categories.map(category => {
+                            const tabId = category.replace(" ", "_");
+                            return (
+                              <li><a data-toggle="tab" href={`#tab${tabId}`}>{category.toUpperCase()}</a></li>
+                            )
+                          })
+                        }
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <!-- /section title -->
+
+          <!-- Products tab & slick -->
+          <div class="col-md-12">
+              <div class="row">
+                  <div class="products-tabs">
+                      {
+                        Object.values(stores).map((store, index) => {
+                          const tabId = categories[index].replace(" ", "_");
+                          const classTab = index === 0 ? 'tab-pane active' : 'tab-pane';
+                          return (
+                            <div id={`tab${tabId}`} class={classTab}>
+                              <div class="products-slick" data-nav={`#slick-nav-${tabId}`}>
+                                {
+                                  Object.values(store).map((products, index) => {
+                                    return (
+                                      products.map(product => {
+                                        return (
+                                          <div class="product">
+                                            <a href={`product.php?category=${categories[index]}&product=${product.id}`}>
+                                              <div class="product-img">
+                                                  <img src={product.img[0]} alt="">
+                                                  <div class="product-label">
+                                                      <span class="sale">-30%</span>
+                                                      <span class="new">NEW</span>
+                                                  </div>
+                                              </div>
+                                              <div class="product-body">
+                                                  <p class="product-category">{categories[index].toUpperCase()}</p>
+                                                  <h3 class="product-name"><a href="#">{product.name}</a></h3>
+                                                  <h4 class="product-price">{product.price} DH <del class="product-old-price">{product.oldPrice} DH</del></h4>
+                                                  <div class="product-rating">
+                                                  </div>
+                                                  <div class="product-btns">
+                                                      <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+                                                      <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+                                                      <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+                                                  </div>
+                                              </div>
+                                              <div class="add-to-cart">
+                                                  <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                              </div>
+                                            </a>
+                                          </div>
+                                        )
+                                      })
+                                    )
+                                  })
+                                }
+                              </div>
+                              <div id={`slick-nav-${tabId}`} class="products-slick-nav"></div>
+                            </div>
+                          )
+                        })
+                      }
+                     
+
+                  </div>
+              </div>
+          </div>
+          <!-- Products tab & slick -->
+      </div>
+      <!-- /row -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+
+
+<!-- FOOTER -->
+<Footer categories={categories}/>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
 </style>

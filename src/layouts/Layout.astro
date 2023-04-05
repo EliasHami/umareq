@@ -3,17 +3,7 @@ export interface Props {
 	title: string;
 }
 
-const { title } = Astro.props;
-import royalJson from '../components/royal.json';
-  
-if (!royalJson) {
-    // deal with error...
-}
-
-
-const stores = royalJson['products'];
-
-const categories = Object.keys(stores);
+const { title, categories } = Astro.props;
 let active = 'index';
 
 ---
@@ -140,7 +130,7 @@ let active = 'index';
 </nav>
 <slot />
 <script>
-import royalJson from '../components/royal.json';
+import royalJson from '/src/data/royal.json';
   
 if (!royalJson) {
     // deal with error...
@@ -167,12 +157,12 @@ if (path?.includes('contact')) {
 
 console.log({active, categories, url: Astro.url, params : Astro.params});
 </script>
-<script src="/src/components/jquery.min.js"></script>
-<script src="/src/components/bootstrap.min.js"></script>
-<script src="/src/components/slick.min.js"></script>
-<script src="/src/components/nouislider.min.js"></script>
-<script src="/src/components/jquery.zoom.min.js"></script>
-<script src="/src/components/main.js"></script>
+<script src="/src/libs/jquery.min.js"></script>
+<script src="/src/libs/bootstrap.min.js"></script>
+<script src="/src/libs/slick.min.js"></script>
+<script src="/src/libs/nouislider.min.js"></script>
+<script src="/src/libs/jquery.zoom.min.js"></script>
+<script src="/src/libs/main.js"></script>
 </body>
 </html>
 

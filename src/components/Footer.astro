@@ -1,0 +1,95 @@
+---
+const { categories} = Astro.props
+---
+
+<!-- NEWSLETTER -->
+<div id="newsletter" class="section">
+  <!-- container -->
+  <div class="container">
+      <!-- row -->
+      <div class="row">
+          <div class="col-md-12">
+              <div class="newsletter">
+                  <ul class="newsletter-follow">
+                      <li>
+                          <a href="#"><i class="fa fa-facebook"></i></a>
+                      </li>
+                      <li>
+                          <a href="#"><i class="fa fa-twitter"></i></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <!-- /row -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /NEWSLETTER -->
+<footer id="footer">
+  <!-- top footer -->
+  <div class="section">
+      <!-- container -->
+      <div class="container">
+          <!-- row -->
+          <div class="row">
+              <div class="col-md-9 col-xs-6">
+                  <div class="footer">
+                      <h3 class="footer-title">Qui sommes nous ?</h3>
+                      <p class="def">La marque ROYAL n’a cessé depuis plusieurs décennies d’afficher une croissance soutenue sur une
+                          gamme domestique élargie.
+                          Son histoire est riche et ponctué par des événements exceptionnels comme l’introduction de la 1ère
+                          machine à laver économique au Maroc. La marque citoyenne a fortement influancé le mode de vie
+                          des ménagères qui pouvaient enfin arrêter le pénible lavage à la main et s’offrir la machine à laver
+                          royal, une machine à la fois très accessible et robuste. Le fameux slogan « Baraka man lfaraka » lance
+                          alors l’incroyable épopée de la marque Royal au Maroc.
+                          Depuis la gamme s’est élargie avec une commercialisation complète en lavage, froid, cuisson,
+                          encastrable et petit électroménager. Issue des plus grands producteurs Mondiaux dans le domaine et
+                          réputé pour sa robuste, la marque Royal s’est donc positionné au fil du temps comme un produit de
+                          qualité a un prix très attrayant.
+                          Ce pôle représente l’activité historique du groupe et peut se vanter d’une collaboration avec plus de
+                          200 points de ventes à travers le pays. A lui seul ce pôle compte plus de 70 employés.</p>
+                      <ul class="footer-links">
+                          <li><a href="#"><i class="fa fa-phone"></i> +212661664475</a></li>
+                          <li><a href="mailto:contact@royal.umareq.com"><i class="fa fa-envelope-o"></i> contact@royal.umareq.com</a></li>
+                      </ul>
+                  </div>
+              </div>
+
+              <div class="clearfix visible-xs"></div>
+
+              <div class="col-md-3 col-xs-6">
+                  <div class="footer">
+                      <h3 class="footer-title">Liens rapides</h3>
+                      <ul class="footer-links">
+                        {
+                          categories.map((category) => {
+                            return <li><a href="store.php?category={category}">{category}</a></li>
+                          })
+                        }
+                      </ul>
+                  </div>
+              </div>
+
+          </div>
+          <!-- /row -->
+      </div>
+      <!-- /container -->
+  </div>
+  <!-- /top footer -->
+
+  <!-- bottom footer -->
+  <div id="bottom-footer" class="section">
+      <div class="container">
+          <!-- row -->
+          <div class="row">
+              <div class="col-md-12 text-center">
+                  PUBNA
+              </div>
+          </div>
+          <!-- /row -->
+      </div>
+      <!-- /container -->
+  </div>
+  <!-- /bottom footer -->
+</footer>
