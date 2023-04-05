@@ -1,35 +1,21 @@
 ---
-import royalJson from '../components/royal.json';
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
-
+import royalJson from '../components/royal.json';
+  
 if (!royalJson) {
     // deal with error...
 }
 
 
 const stores = royalJson['products'];
-const accueil = royalJson['accueil'];
-
-const firstCategory = Object.keys(stores);
 
 const categories = Object.keys(stores);
-
-const {path} = Astro.params;
 let active = 'index';
-const category = Astro.url.searchParams.get('category')
-if (category) {
 
-    active = category;
-
-}
-
-if (path?.includes('contact')) {
-    active = 'contact';
-}
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -80,7 +66,7 @@ if (path?.includes('contact')) {
                 <li><a href="mailto:contact@royal.umareq.com"><i class="fa fa-envelope-o"></i> contact@royal.umareq.com</a></li>
             </ul>
             <ul class="header-links pull-right">
-                <li><a href="contact.php"><i class="fa fa-envelope"></i> Passez votre commande</a></li>
+                <li><a href="/contact"><i class="fa fa-envelope"></i> Passez votre commande</a></li>
                 <li class="btn-mini" style="font-size:20px">
                     <a target="_blank"
                        href="https://wa.me/212661664475?text=Bonjour%2C%0D%0AJe+voudrai+avoir+des+informations+sur+les+produits+ROYAL.%0D%0AMerci"><img
@@ -106,7 +92,7 @@ if (path?.includes('contact')) {
                 <!-- SEARCH BAR -->
                 <div class="col-md-6">
                     <div style="margin: 0 auto; display: table;">
-                        <a href="index.php" class="logo">
+                        <a href="index" class="logo">
                             <img src="/logo.png" height="150px" alt="">
                         </a>
                     </div>
@@ -144,21 +130,50 @@ if (path?.includes('contact')) {
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class={active === 'index' ? "active" : ""}><a href="/">Accueil</a></li>
-                { categories.map(category => {
-                    if(active === category)
-                    {
-                        return <li class="active" ><a href="/store?category={category}" >{category.toUpperCase()}</a ></li >;
-                    }else
-                    {
-                        return <li ><a href="/store?category={category}" >{category.toUpperCase()}</a ></li >;
-                    }
-                })}
-                <li class={active === 'contact' ? "active" : ""}><a href="contact.php" >Nous contacter</a ></li>
+                { categories.map(category => (
+                  <li class={active === category ? "active" : ""} ><a href="/store?category={category}" >{category.toUpperCase()}</a ></li >
+                ))}
+                <li class='contact'><a href="/contact" >Nous contacter</a ></li>
             </ul>
         </div>
     </div>
 </nav>
 <slot />
+<script>
+import royalJson from '../components/royal.json';
+  
+if (!royalJson) {
+    // deal with error...
+}
+
+
+const stores = royalJson['products'];
+
+const categories = Object.keys(stores);
+
+const {path} = Astro.params;
+let active = 'index';
+const category = Astro.url.searchParams.get('category')
+if (category) {
+
+    active = category;
+
+}
+
+if (path?.includes('contact')) {
+    active = 'contact';
+}
+
+
+console.log({active, categories, url: Astro.url, params : Astro.params});
+</script>
+<script src="/src/components/jquery.min.js"></script>
+<script src="/src/components/bootstrap.min.js"></script>
+<script src="/src/components/slick.min.js"></script>
+<script src="/src/components/nouislider.min.js"></script>
+<script src="/src/components/jquery.zoom.min.js"></script>
+<script src="/src/components/main.js"></script>
 </body>
 </html>
+
 <!-- /HEADER -->
