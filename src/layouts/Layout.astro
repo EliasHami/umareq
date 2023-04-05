@@ -83,7 +83,7 @@ let active = 'index';
                 <div class="col-md-6">
                     <div style="margin: 0 auto; display: table;">
                         <a href="index" class="logo">
-                            <img src="/logo.png" height="150px" alt="">
+                            <img src="logo.png" height="150px" alt="">
                         </a>
                     </div>
                 </div>
@@ -121,41 +121,24 @@ let active = 'index';
             <ul class="nav navbar-nav">
                 <li class={active === 'index' ? "active" : ""}><a href="/">Accueil</a></li>
                 { categories.map(category => (
-                  <li class={active === category ? "active" : ""} ><a href="/store?category={category}" >{category.toUpperCase()}</a ></li >
+                  <li class={active === category ? "active" : ""} ><a href={category} >{category.toUpperCase()}</a ></li >
                 ))}
-                <li class='contact'><a href="/contact" >Nous contacter</a ></li>
+                <li class='contact'><a href="contact" >Nous contacter</a ></li>
             </ul>
         </div>
     </div>
 </nav>
 <slot />
 <script>
-import royalJson from '/src/data/royal.json';
-  
-if (!royalJson) {
-    // deal with error...
-}
+const currentLocation = location.href;
+const menuItem = document.querySelectorAll('.nav ul li');
 
+menuItem.forEach(item => {
+    if (item.querySelector('a').href === currentLocation) {
+        item.classList.add('active');
+    }
+});
 
-const stores = royalJson['products'];
-
-const categories = Object.keys(stores);
-
-const {path} = Astro.params;
-let active = 'index';
-const category = Astro.url.searchParams.get('category')
-if (category) {
-
-    active = category;
-
-}
-
-if (path?.includes('contact')) {
-    active = 'contact';
-}
-
-
-console.log({active, categories, url: Astro.url, params : Astro.params});
 </script>
 <script src="/src/libs/jquery.min.js"></script>
 <script src="/src/libs/bootstrap.min.js"></script>

@@ -1,15 +1,15 @@
 {
   "accueil":{
     "img":{
-      "Lavage": "./img/lavage/accueil.jpg",
-      "Froid": "./img/froid/accueil.jpg",
-      "Cuisson": "./img/cuisson/accueil.jpg",
-      "Encastrable": "./img/encastrable/accueil.jpg",
-      "Nouveautés": "./img/Nouveautés/accueil.jpg",
-      "Confort": "./img/confort/accueil 2.jpg",
-      "TV": "./img/tv/accueil.jpg",
-      "Promotion": "./img/Promotion/accueil.jpg",
-      "Petit Electro": "./img/petit_electro/accueil.jpg"
+      "Lavage": "/lavage/accueil.jpg",
+      "Froid": "/froid/accueil.jpg",
+      "Cuisson": "/cuisson/accueil.jpg",
+      "Encastrable": "/encastrable/accueil.jpg",
+      "Nouveautés": "/Nouveautés/accueil.jpg",
+      "Confort": "/confort/accueil 2.jpg",
+      "TV": "/tv/accueil.jpg",
+      "Promotion": "/Promotion/accueil.jpg",
+      "Petit Electro": "/petit_electro/accueil.jpg"
     }
   },
   "products": {
@@ -21,8 +21,8 @@
           "type": "Automatique 8.2 kg",
           "etat": true,
           "img": [
-            "./img/lavage/WTP-820.jpg",
-            "./img/lavage/WTP-820-.jpg"
+            "/lavage/WTP-820.jpg",
+            "/lavage/WTP-820-.jpg"
           ],
           "description": [
             "Capacité de lavage 8.2 kg Avec pompe",
@@ -39,8 +39,8 @@
           "type": "Automatique 7 kg",
           "etat": true,
           "img": [
-            "./img/lavage/WD7100W.jpg",
-            "./img/lavage/WD7100W--Blanc.jpg"
+            "/lavage/WD7100W.jpg",
+            "/lavage/WD7100W--Blanc.jpg"
           ],
           "description": [
             "Couleur :  Blanc",
@@ -57,7 +57,7 @@
           "type": "Automatique 7 kg",
           "etat": true,
           "img": [
-            "./img/lavage/WD-7100S.jpg"
+            "/lavage/WD-7100S.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -74,8 +74,8 @@
           "type": "Automatique 9 kg",
           "etat": true,
           "img": [
-            "./img/lavage/WD9120S.jpg",
-            "./img/lavage/WD9120S--Silver.jpg"
+            "/lavage/WD9120S.jpg",
+            "/lavage/WD9120S--Silver.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -93,8 +93,8 @@
           "type": "Automatique 10 kg",
           "etat": true,
           "img": [
-            "./img/lavage/WI10140S.jpg",
-            "./img/lavage/WI10140S--Silver.jpg"
+            "/lavage/WI10140S.jpg",
+            "/lavage/WI10140S--Silver.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -113,7 +113,7 @@
           "type": "Semi-automatique 3 kg",
           "etat": true,
           "img": [
-            "./img/lavage/RS-30.jpg"
+            "/lavage/RS-30.jpg"
           ],
           "description": [
             "Capacité de lavage 3 kg avec essorage",
@@ -128,7 +128,7 @@
           "type": "Semi-automatique 4 kg",
           "etat": true,
           "img": [
-            "./img/lavage/RS-40.jpg"
+            "/lavage/RS-40.jpg"
           ],
           "description": [
             "Capacité de lavage 4 kg avec essorage",
@@ -144,7 +144,7 @@
           "type": "Semi-automatique 10 kg",
           "etat": true,
           "img": [
-            "./img/lavage/RS-100.jpg"
+            "/lavage/RS-100.jpg"
           ],
           "description": [
             "Capacité de lavage 10 kg sans essorage",
@@ -162,7 +162,7 @@
           "type": "Semi-automatique 9 kg",
           "etat": true,
           "img": [
-            "./img/lavage/RMB-90.jpg"
+            "/lavage/RMB-90.jpg"
           ],
           "description": [
             "Capacité de lavage 9 kg avec essorage",
@@ -179,7 +179,7 @@
           "type": "Semi-automatique 8 kg",
           "etat": true,
           "img": [
-            "./img/lavage/RMY-80.jpg"
+            "/lavage/RMY-80.jpg"
           ],
           "description": [
             "Capacité de lavage 8 kg avec essorage",
@@ -196,7 +196,7 @@
           "type": "Semi-automatique 9 kg",
           "etat": true,
           "img": [
-            "./img/lavage/RMY-90.jpg"
+            "/lavage/RMY-90.jpg"
           ],
           "description": [
             "Capacité de lavage 9 kg avec essorage",
@@ -213,7 +213,7 @@
           "type": "Semi-automatique 12 kg",
           "etat": true,
           "img": [
-            "./img/lavage/RMY-120.jpg"
+            "/lavage/RMY-120.jpg"
           ],
           "description": [
             "Capacité de lavage 12 kg avec essorage",
@@ -230,7 +230,7 @@
           "type": "Semi-automatique 9 kg",
           "etat": true,
           "img": [
-            "./img/lavage/RMX-90.jpg"
+            "/lavage/RMX-90.jpg"
           ],
           "description": [
             "Capacité de lavage 9 kg avec essorage",
@@ -247,7 +247,7 @@
           "type": "Semi-automatique 11 kg",
           "etat": true,
           "img": [
-            "./img/lavage/RMX-110.jpg"
+            "/lavage/RMX-110.jpg"
           ],
           "description": [
             "Capacité de lavage 11 kg avec essorage",
@@ -264,7 +264,7 @@
           "type": "Semi-automatique 13 kg",
           "etat": true,
           "img": [
-            "./img/lavage/RMX-130.jpg"
+            "/lavage/RMX-130.jpg"
           ],
           "description": [
             "Capacité de lavage 13 kg avec essorage",
@@ -285,7 +285,7 @@
           "type": "Mini Bar 50 L",
           "etat": true,
           "img": [
-            "./img/froid/BC-55-SM.jpg"
+            "/froid/BC-55-SM.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -300,7 +300,7 @@
           "type": "MINI BAR 100 L",
           "etat": true,
           "img": [
-            "./img/froid/BC-95-SM.jpg"
+            "/froid/BC-95-SM.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -317,8 +317,8 @@
           "type": "REFREGIRATEUR 280 L",
           "etat": true,
           "img": [
-            "./img/froid/RM-280-S.jpg",
-            "./img/froid/RM-280-S-.jpg"
+            "/froid/RM-280-S.jpg",
+            "/froid/RM-280-S-.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -333,8 +333,8 @@
           "type": "SIDE BY SIDE 690 L",
           "etat": true,
           "img": [
-            "./img/froid/ST-690-X.jpg",
-            "./img/froid/ST-690-X-.jpg"
+            "/froid/ST-690-X.jpg",
+            "/froid/ST-690-X-.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -355,7 +355,7 @@
           "type": "CONGELATEUR COFFRE 160 L",
           "etat": true,
           "img": [
-            "./img/froid/CH-160-XS.jpg"
+            "/froid/CH-160-XS.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -374,7 +374,7 @@
           "type": "CONGELATEUR COFFRE 250 L",
           "etat": true,
           "img": [
-            "./img/froid/CH-250-XS.jpg"
+            "/froid/CH-250-XS.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -393,7 +393,7 @@
           "type": "CONGELATEUR COFFRE 300 L",
           "etat": true,
           "img": [
-            "./img/froid/CH-300-XS.jpg"
+            "/froid/CH-300-XS.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -412,8 +412,8 @@
           "type": "CONGELATEUR COFFRE 300 L",
           "etat": true,
           "img": [
-            "./img/froid/CV-300-S.jpg",
-            "./img/froid/CV-300-S-.jpg"
+            "/froid/CV-300-S.jpg",
+            "/froid/CV-300-S-.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -438,7 +438,7 @@
           "type": "Cuisinière 50x50 cm",
           "etat": true,
           "img": [
-            "./img/cuisson/3405-NGW.jpg"
+            "/cuisson/3405-NGW.jpg"
           ],
           "description": [
             "Plaque d’âtre  en inox",
@@ -458,7 +458,7 @@
           "type": "Cuisinière 50x50 cm",
           "etat": true,
           "img": [
-            "./img/cuisson/3405-NGK.jpg"
+            "/cuisson/3405-NGK.jpg"
           ],
           "description": [
             "Couleur : Noir",
@@ -481,7 +481,7 @@
           "type": "Cuisinière 60x60 cm",
           "etat": true,
           "img": [
-            "./img/cuisson/6111-NGI.jpg"
+            "/cuisson/6111-NGI.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -501,7 +501,7 @@
           "type": "Cuisinière 60x60 cm",
           "etat": true,
           "img": [
-            "./img/cuisson/6433 NGI.jpg"
+            "/cuisson/6433 NGI.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -525,7 +525,7 @@
           "type": "Cuisinière cache bouteille 90x60 cm",
           "etat": true,
           "img": [
-            "./img/cuisson/9601-NGB.jpg"
+            "/cuisson/9601-NGB.jpg"
           ],
           "description": [
             "Couleur : Blanc",
@@ -546,7 +546,7 @@
           "type": "Cuisinière cache bouteille 90x60 cm",
           "etat": true,
           "img": [
-            "./img/cuisson/9601-NGBI.jpg"
+            "/cuisson/9601-NGBI.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -567,7 +567,7 @@
           "type": "Cuisinière four géant 90x60 cm",
           "etat": true,
           "img": [
-            "./img/cuisson/9601-NPI.jpg"
+            "/cuisson/9601-NPI.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -588,7 +588,7 @@
           "type": "Cuisinière 90x60 cm",
           "etat": true,
           "img": [
-            "./img/cuisson/9520BXF.jpg"
+            "/cuisson/9520BXF.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -610,7 +610,7 @@
           "type": "Cuisinière 90x60 cm",
           "etat": true,
           "img": [
-            "./img/cuisson/9620XF.jpg"
+            "/cuisson/9620XF.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -637,7 +637,7 @@
           "type": "Hotte 60 cm",
           "etat": true,
           "img": [
-            "./img/encastrable/F-6.jpg"
+            "/encastrable/F-6.jpg"
           ],
           "description": [
             "Couleur : Blanc",
@@ -653,7 +653,7 @@
           "type": "Hotte 60 cm inox",
           "etat": true,
           "img": [
-            "./img/encastrable/KO-830-inox.jpg"
+            "/encastrable/KO-830-inox.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -671,7 +671,7 @@
           "type": "Hotte 60 cm inox",
           "etat": true,
           "img": [
-            "./img/encastrable/dp-6-inox.jpg"
+            "/encastrable/dp-6-inox.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -688,9 +688,9 @@
           "type": "Hotte 60 cm inox",
           "etat": true,
           "img": [
-            "./img/encastrable/KO-710-X--Inox.jpg",
-            "./img/encastrable/KO-710-B--Noir.jpg",
-            "./img/encastrable/KO-710-X-B.jpg"
+            "/encastrable/KO-710-X--Inox.jpg",
+            "/encastrable/KO-710-B--Noir.jpg",
+            "/encastrable/KO-710-X-B.jpg"
           ],
           "description": [
             "Couleur : Inox et Noir",
@@ -708,10 +708,10 @@
           "type": "Hotte 60 cm",
           "etat": true,
           "img": [
-            "./img/encastrable/KO-735-W--Blanc-.jpg",
-            "./img/encastrable/KO-735-B--Noir.jpg",
-            "./img/encastrable/KO-735-W--Blanc.jpg",
-            "./img/encastrable/KO-735-W-B.jpg"
+            "/encastrable/KO-735-W--Blanc-.jpg",
+            "/encastrable/KO-735-B--Noir.jpg",
+            "/encastrable/KO-735-W--Blanc.jpg",
+            "/encastrable/KO-735-W-B.jpg"
           ],
           "description": [
             "Couleur : Blanc et Noir",
@@ -733,7 +733,7 @@
           "type": "Plaque 4 feux inox",
           "etat": true,
           "img": [
-            "./img/encastrable/LX-410.jpg"
+            "/encastrable/LX-410.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -748,7 +748,7 @@
           "type": "Plaque 4 feux",
           "etat": true,
           "img": [
-            "./img/encastrable/LX-40TAHD--Blanc.jpg"
+            "/encastrable/LX-40TAHD--Blanc.jpg"
           ],
           "description": [
             "Couleur : Blanc",
@@ -766,7 +766,7 @@
           "type": "Four 60 cm Multifonctions",
           "etat": true,
           "img": [
-            "./img/encastrable/B6002ZERW.jpg"
+            "/encastrable/B6002ZERW.jpg"
           ],
           "description": [
             "Couleur : Blanc",
@@ -785,7 +785,7 @@
           "type": "Four 60 cm noir Multifonctions",
           "etat": true,
           "img": [
-            "./img/encastrable/A6-SF2-(DDT)--Noir.jpg"
+            "/encastrable/A6-SF2-(DDT)--Noir.jpg"
           ],
           "description": [
             "Couleur : Noir",
@@ -805,8 +805,8 @@
           "type": "Four 60 cm Multifonctions",
           "etat": true,
           "img": [
-            "./img/encastrable/A6-SF2-(DT)--Blanc.jpg",
-            "./img/encastrable/A6-SF2(DT)-Noir.jpg"
+            "/encastrable/A6-SF2-(DT)--Blanc.jpg",
+            "/encastrable/A6-SF2(DT)-Noir.jpg"
           ],
           "description": [
             "Couleur : Blanc et Noir",
@@ -826,8 +826,8 @@
           "type": "Four 60 cm inox Multifonctions",
           "etat": true,
           "img": [
-            "./img/encastrable/A6-SF2-(MT).jpg",
-            "./img/encastrable/A6-SF2-(MT)--Noir.jpg"
+            "/encastrable/A6-SF2-(MT).jpg",
+            "/encastrable/A6-SF2-(MT)--Noir.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -855,7 +855,7 @@
           "type": " 8K",
           "etat": true,
           "img": [
-            "./img/TV/www.jpg"
+            "/TV/www.jpg"
           ],
           "description": [
             "wVV",
@@ -872,7 +872,7 @@
           "type": "ROYAl",
           "etat": true,
           "img": [
-            "./img/TV/wwwww.jpg"
+            "/TV/wwwww.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -896,7 +896,7 @@
           "type": "Chauffage Convecteur 2500W",
           "etat": true,
           "img": [
-            "./img/confort/HC-2947.jpg"
+            "/confort/HC-2947.jpg"
           ],
           "description": [
             "Puissance 2 500 W",
@@ -914,7 +914,7 @@
           "type": "Chauffage Halogène 1500W",
           "etat": true,
           "img": [
-            "./img/confort/LX-2820.jpg"
+            "/confort/LX-2820.jpg"
           ],
           "description": [
             "1 500 W",
@@ -929,7 +929,7 @@
           "type": "Chauffage Halogène 1800W",
           "etat": true,
           "img": [
-            "./img/confort/LX-2831.jpg"
+            "/confort/LX-2831.jpg"
           ],
           "description": [
             "Puissance : 1 800 W",
@@ -946,7 +946,7 @@
           "type": "Chauffage Souflant 2000W",
           "etat": true,
           "img": [
-            "./img/confort/LX-6331T.jpg"
+            "/confort/LX-6331T.jpg"
           ],
           "description": [
             "Puissance : 2 000 W",
@@ -965,7 +965,7 @@
           "type": "Chauffe eau éléctrique - 35 Litres",
           "etat": true,
           "img": [
-            "./img/confort/whr-35-s.jpg"
+            "/confort/whr-35-s.jpg"
           ],
           "description": [
             "Indicateur : blue wave",
@@ -981,7 +981,7 @@
           "type": "Chauffe eau éléctrique - 50 Litres",
           "etat": true,
           "img": [
-            "./img/confort/whr-50-s.jpg"
+            "/confort/whr-50-s.jpg"
           ],
           "description": [
             "Indicateur : blue wave ",
@@ -1000,7 +1000,7 @@
           "type": "Climatiseur mural - 9000BTU",
           "etat": true,
           "img": [
-            "./img/confort/KAC-9GHA.jpg"
+            "/confort/KAC-9GHA.jpg"
           ],
           "description": [
             "9000 BTU",
@@ -1016,7 +1016,7 @@
           "type": "Climatiseur mural - 12000BTU",
           "etat": true,
           "img": [
-            "./img/confort/KAC-12GHA.jpg"
+            "/confort/KAC-12GHA.jpg"
           ],
           "description": [
             "12000 BTU",
@@ -1036,7 +1036,7 @@
           "type": "Ventilateur sur pied - 3 Vitesses",
           "etat": true,
           "img": [
-            "./img/confort/VR300B.jpg"
+            "/confort/VR300B.jpg"
             
           ],
           "description": [
@@ -1058,7 +1058,7 @@
           "type": "FLAT 32'",
           "etat": true,
           "img": [
-            "./img/TV/FL-32-SA.jpg"
+            "/TV/FL-32-SA.jpg"
           ],
           "description": [
             "Taille de l'écran : 32' Diagonal",
@@ -1081,7 +1081,7 @@
           "type": "FLAT 43'",
           "etat": true,
           "img": [
-            "./img/TV/FL-43-SA.jpg"
+            "/TV/FL-43-SA.jpg"
           ],
           "description": [
             "Taille de l'écran : 43' Diagonal",
@@ -1103,7 +1103,7 @@
           "type": "FLAT 55'",
           "etat": true,
           "img": [
-            "./img/TV/FL-55-SV.jpg"
+            "/TV/FL-55-SV.jpg"
           ],
           "description": [
             "Taille de l'écran : 55' Diagonal",
@@ -1130,7 +1130,7 @@
           "type": " 4K",
           "etat": true,
           "img": [
-            "./img/TV/www.jpg"
+            "/TV/www.jpg"
           ],
           "description": [
             "wVV",
@@ -1147,7 +1147,7 @@
           "type": "ROYAl fr",
           "etat": true,
           "img": [
-            "./img/TV/wwwww.jpg"
+            "/TV/wwwww.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -1168,8 +1168,8 @@
           "type": "Four 36 L",
           "etat": true,
           "img": [
-            "./img/petit_electro/FEB-36.jpg",
-            "./img/petit_electro/FEB-36-Noir.jpg"
+            "/petit_electro/FEB-36.jpg",
+            "/petit_electro/FEB-36-Noir.jpg"
           ],
           "description": [
             "Couleur : Noir et Silver",
@@ -1187,7 +1187,7 @@
           "type": "Four 50 L",
           "etat": true,
           "img": [
-            "./img/petit_electro/FEB-50.jpg"
+            "/petit_electro/FEB-50.jpg"
           ],
           "description": [
             "Couleur : Silver",
@@ -1205,7 +1205,7 @@
           "type": "Four 70 L",
           "etat": true,
           "img": [
-            "./img/petit_electro/FEB-70.jpg"
+            "/petit_electro/FEB-70.jpg"
           ],
           "description": [
             "Couleur : Inox",
@@ -1228,7 +1228,7 @@
           "type": "Aspirateur sans sac 1600w",
           "etat": true,
           "img": [
-            "./img/petit_electro/VY-16.jpg"
+            "/petit_electro/VY-16.jpg"
           ],
           "description": [
             "Capacité de poussière : 1.8 L",
@@ -1245,7 +1245,7 @@
           "type": "Belender",
           "etat": true,
           "img": [
-            "./img/petit_electro/RL-125.jpg"
+            "/petit_electro/RL-125.jpg"
           ],
           "description": [
             "Puissance 350 w",
@@ -1264,7 +1264,7 @@
           "type": "barbecue électrique",
           "etat": true,
           "img": [
-            "./img/petit_electro/KB-6020.jpg"
+            "/petit_electro/KB-6020.jpg"
           ],
           "description": [
             "Couleur : Noir",
@@ -1281,7 +1281,7 @@
           "type": "Presse panini",
           "etat": true,
           "img": [
-            "./img/petit_electro/RL-216.jpg"
+            "/petit_electro/RL-216.jpg"
           ],
           "description": [
             "Puissance 750 w",
@@ -1298,7 +1298,7 @@
           "type": "Toaster electronique",
           "etat": true,
           "img": [
-            "./img/petit_electro/RL-098.jpg"
+            "/petit_electro/RL-098.jpg"
           ],
           "description": [
             "Puissance 650-750 w",
@@ -1317,7 +1317,7 @@
           "type": "Presse agrume",
           "etat": true,
           "img": [
-            "./img/petit_electro/RL-868.jpg"
+            "/petit_electro/RL-868.jpg"
           ],
           "description": [
             "Puissance 40 w",

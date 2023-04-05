@@ -461,7 +461,7 @@ textarea.input {
     padding-top: 15px;
     padding-bottom: 15px;
     background-color: #15161D;
-    background-image: url('../img/header_banner.jpg');
+    background-image: url('/header_banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -824,7 +824,7 @@ textarea.input {
     padding: 60px 0px;
     margin: 30px 0px;
     background-color: #E4E7ED;
-    background-image: url('../img/hotdeal.png');
+    background-image: url('/hotdeal.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% auto;

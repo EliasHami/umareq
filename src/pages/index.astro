@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import royalJson from '/src/data/royal.json';
+import royalJson from '../data/royal.json';
 import Footer from '../components/Footer.astro';
   
 if (!royalJson) {
@@ -11,8 +11,8 @@ const accueil = royalJson['accueil'];
 
 const stores = royalJson['products'];
 
-console.log({stores})
 const categories = Object.keys(stores);
+console.log({stores, categories})
 ---
 
 <Layout title="ROYAL - SMART APPLIANCES" categories={categories}>
@@ -26,17 +26,11 @@ const categories = Object.keys(stores);
           { categories.map(category => {
               const img = accueil['img'][category];
               return (
-                
-              <div class="col-md-4 col-xs-6 logo-separator">
-                  <div>
-                      <img src="img/royal_2.png">
-                  </div>
-                </div>
                 <div class="col-md-4 col-xs-6">
-                  <a href={`store?category=${category}`} class="cta-btn">
+                  <a href={category} class="cta-btn">
                       <div class="shop">
                           <div class="shop-img">
-                              <img src={img} alt="">
+                              <img src={img} alt="royal_2.png">
                           </div>
                           <div class="shop-body">
                               <h3>{category.toUpperCase()}</h3>
@@ -80,7 +74,7 @@ const categories = Object.keys(stores);
                   <!-- product tab nav -->
                   <ul class="tab-nav">
                       <li class="active"><a data-toggle="tab" href="#tab1" <div>
-                          <img src="img/royal_b.png">
+                          <img src="royal_b.png">
                           </div>
                   </ul>
                   <!-- product tab content -->
@@ -146,8 +140,8 @@ const categories = Object.keys(stores);
               <div class="row">
                   <div class="products-tabs">
                       {
-                        Object.values(stores).map((store, index) => {
-                          const tabId = categories[index].replace(" ", "_");
+                        Object.entries(stores).map(([key, store], index) => {
+                          const tabId = key.replace(" ", "_");
                           const classTab = index === 0 ? 'tab-pane active' : 'tab-pane';
                           return (
                             <div id={`tab${tabId}`} class={classTab}>
@@ -155,10 +149,11 @@ const categories = Object.keys(stores);
                                 {
                                   Object.values(store).map((products, index) => {
                                     return (
-                                      products.map(product => {
+                                      <span>
+                                     { products.map(product => {
                                         return (
                                           <div class="product">
-                                            <a href={`product.php?category=${categories[index]}&product=${product.id}`}>
+                                            <a href={`product.php?category=${key}&product=${product.id}`}>
                                               <div class="product-img">
                                                   <img src={product.img[0]} alt="">
                                                   <div class="product-label">
@@ -167,7 +162,7 @@ const categories = Object.keys(stores);
                                                   </div>
                                               </div>
                                               <div class="product-body">
-                                                  <p class="product-category">{categories[index].toUpperCase()}</p>
+                                                  <p class="product-category">{key.toUpperCase()}</p>
                                                   <h3 class="product-name"><a href="#">{product.name}</a></h3>
                                                   <h4 class="product-price">{product.price} DH <del class="product-old-price">{product.oldPrice} DH</del></h4>
                                                   <div class="product-rating">
@@ -184,7 +179,8 @@ const categories = Object.keys(stores);
                                             </a>
                                           </div>
                                         )
-                                      })
+                                      })}
+                                    </span>
                                     )
                                   })
                                 }
