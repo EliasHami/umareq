@@ -3,6 +3,8 @@ import Header from "../components/Header.astro";
 import Navigation from "../components/Navigation.astro";
 
 const { categories } = Astro.props;
+
+console.log("layout", { categories });
 ---
 
 <!DOCTYPE html>
@@ -25,31 +27,31 @@ const { categories } = Astro.props;
     <link
       type="text/css"
       rel="stylesheet"
-      href="src/styles/bootstrap.min.css"
+      href="/src/styles/bootstrap.min.css"
     />
 
     <!-- Slick -->
-    <link type="text/css" rel="stylesheet" href="src/styles/slick.css" />
-    <link type="text/css" rel="stylesheet" href="src/styles/slick-theme.css" />
+    <link type="text/css" rel="stylesheet" href="/src/styles/slick.css" />
+    <link type="text/css" rel="stylesheet" href="/src/styles/slick-theme.css" />
 
     <!-- nouislider -->
     <link
       type="text/css"
       rel="stylesheet"
-      href="src/styles/nouislider.min.css"
+      href="/src/styles/nouislider.min.css"
     />
 
     <!-- Font Awesome Icon -->
     <link
       rel="stylesheet"
-      href="src/styles/font-awesome/css/font-awesome.min.css"
+      href="/src/styles/font-awesome/css/font-awesome.min.css"
     />
 
     <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="src/styles/font-awesome.min.css" />
+    <link rel="stylesheet" href="/src/styles/font-awesome.min.css" />
 
     <!-- Custom stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="src/styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="/src/styles/style.css" />
   </head>
   <body>
     <Header />

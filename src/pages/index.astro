@@ -1,213 +1,28 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import royalJson from '../data/royal.json';
-import Footer from '../components/Footer.astro';
-  
+import Layout from "../layouts/Layout.astro";
+import royalJson from "../data/royal.json";
+import Footer from "../components/Footer.astro";
+import CategoriesCard from "../components/CategoriesCard.astro";
+import HotDeals from "../components/HotDeals.astro";
+import Brand from "../components/Brand.astro";
+import ProductRangesCard from "../components/ProductRangesCard.astro";
+
 if (!royalJson) {
-    // deal with error...
+  // deal with error...
 }
 
-const accueil = royalJson['accueil'];
+const accueil = royalJson["accueil"];
 
-const stores = royalJson['products'];
+const products = royalJson["products"];
 
-const categories = Object.keys(stores);
-console.log({stores, categories})
+const categories = Object.keys(products);
+console.log({ products, categories });
 ---
 
-<Layout title="ROYAL - SMART APPLIANCES" categories={categories}>
-	<!-- SECTION -->
-<div class="section" style="background: #eeeeee">
-  <!-- container -->
-  <div class="container">
-      <!-- row -->
-      <div class="row">
-          <!-- shop -->
-          { categories.map(category => {
-              const img = accueil['img'][category];
-              return (
-                <div class="col-md-4 col-xs-6">
-                  <a href={category} class="cta-btn">
-                      <div class="shop">
-                          <div class="shop-img">
-                              <img src={img} alt="royal_2.png">
-                          </div>
-                          <div class="shop-body">
-                              <h3>{category.toUpperCase()}</h3>
-                          </div>
-                      </div>
-                  </a>
-              </div>)
-          })}
-
-          <!-- /shop -->
-      </div>
-      <!-- /row -->
-  </div>
-  <!-- /container -->
-</div>
-<!-- HOT DEAL SECTION -->
-<div id="hot-deal" class="section">
-  <!-- container -->
-  <div class="container">
-      <!-- row -->
-      <div class="row">
-          <div class="col-md-12">
-              <div class="hot-deal">
-                  <p style="color: #f5f5f5; text-shadow: #222 5px 0 10px;font-weight: 700;">Ne ratez pas l'occasion</p>
-                  <h2 class="text-uppercase" style="color: #ffff00; text-shadow: #222 5px 0 10px;">Passez votre commande</h2>
-                  <a class="primary-btn cta-btn" href="contact.php">Commander</a>
-              </div>
-          </div>
-      </div>
-      <!-- /row -->
-  </div>
-  <!-- /container -->
-</div>
-<!-- /HOT DEAL SECTION -->
-<!-- /SECTION -->
-<div class="section">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-12">
-              <div id="product-tab">
-                  <!-- product tab nav -->
-                  <ul class="tab-nav">
-                      <li class="active"><a data-toggle="tab" href="#tab1" <div>
-                          <img src="royal_b.png">
-                          </div>
-                  </ul>
-                  <!-- product tab content -->
-                  <div class="tab-content">
-                      <!-- tab2  -->
-                      <div id="tab1" class="tab-pane fade in active">
-                          <div class="row">
-                              <div class="col-md-12">
-                                  <p class="def">La marque ROYAL n’a cessé depuis plusieurs décennies d’afficher une croissance soutenue sur une
-                                      gamme domestique élargie.
-                                      Son histoire est riche et ponctué par des événements exceptionnels comme l’introduction de la 1ère
-                                      machine à laver économique au Maroc. La marque citoyenne a fortement influancé le mode de vie
-                                      des ménagères qui pouvaient enfin arrêter le pénible lavage à la main et s’offrir la machine à laver
-                                      royal, une machine à la fois très accessible et robuste. Le fameux slogan « Baraka man lfaraka » lance
-                                      alors l’incroyable épopée de la marque Royal au Maroc.
-                                      Depuis la gamme s’est élargie avec une commercialisation complète en lavage, froid, cuisson,
-                                      encastrable et petit électroménager. Issue des plus grands producteurs Mondiaux dans le domaine et
-                                      réputé pour sa robuste, la marque Royal s’est donc positionné au fil du temps comme un produit de
-                                      qualité a un prix très attrayant.
-                                      Ce pôle représente l’activité historique du groupe et peut se vanter d’une collaboration avec plus de
-                                      200 points de ventes à travers le pays. A lui seul ce pôle compte plus de 70 employés.</p>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- /tab2  -->
-
-                  </div>
-                  <!-- /product tab content  -->
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-<!-- SECTION -->
-<div class="section">
-  <!-- container -->
-  <div class="container">
-      <!-- row -->
-      <div class="row">
-
-          <!-- section title -->
-          <div class="col-md-12">
-              <div class="section-title">
-                  <h3 class="title">Les produits de la gamme ROYAL</h3>
-                  <div class="section-nav">
-                      <ul class="section-tab-nav tab-nav">
-                        {
-                          categories.map(category => {
-                            const tabId = category.replace(" ", "_");
-                            return (
-                              <li><a data-toggle="tab" href={`#tab${tabId}`}>{category.toUpperCase()}</a></li>
-                            )
-                          })
-                        }
-                      </ul>
-                  </div>
-              </div>
-          </div>
-          <!-- /section title -->
-
-          <!-- Products tab & slick -->
-          <div class="col-md-12">
-              <div class="row">
-                  <div class="products-tabs">
-                      {
-                        Object.entries(stores).map(([category, store], index) => {
-                          const tabId = category.replace(" ", "_");
-                          const classTab = index === 0 ? 'tab-pane active' : 'tab-pane';
-                          return (
-                            <div id={`tab${tabId}`} class={classTab}>
-                              <div class="products-slick" data-nav={`#slick-nav-${tabId}`}>
-                                {
-                                  Object.values(store).map((products, index) => {
-                                    return (
-                                      <span>
-                                     { products.map(product => {
-                                        return (
-                                          <div class="product">
-                                            <a href={`product.php?category=${category}&product=${product.id}`}>
-                                              <div class="product-img">
-                                                  <img src={product.img[0]} alt="">
-                                                  <div class="product-label">
-                                                      <span class="sale">-30%</span>
-                                                      <span class="new">NEW</span>
-                                                  </div>
-                                              </div>
-                                              <div class="product-body">
-                                                  <p class="product-category">{category.toUpperCase()}</p>
-                                                  <h3 class="product-name"><a href="#">{product.name}</a></h3>
-                                                  <h4 class="product-price">{product.price} DH <del class="product-old-price">{product.oldPrice} DH</del></h4>
-                                                  <div class="product-rating">
-                                                  </div>
-                                                  <div class="product-btns">
-                                                      <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                                      <button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-                                                      <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
-                                                  </div>
-                                              </div>
-                                              <div class="add-to-cart">
-                                                  <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                              </div>
-                                            </a>
-                                          </div>
-                                        )
-                                      })}
-                                    </span>
-                                    )
-                                  })
-                                }
-                              </div>
-                              <div id={`slick-nav-${tabId}`} class="products-slick-nav"></div>
-                            </div>
-                          )
-                        })
-                      }
-                     
-
-                  </div>
-              </div>
-          </div>
-          <!-- Products tab & slick -->
-      </div>
-      <!-- /row -->
-  </div>
-  <!-- /container -->
-</div>
-<!-- /SECTION -->
-
-
-
-<!-- FOOTER -->
-<Footer categories={categories}/>
+<Layout categories={categories}>
+  <CategoriesCard accueil={accueil} categories={categories} />
+  <HotDeals />
+  <Brand />
+  <ProductRangesCard categories={categories} products={products} />
+  <Footer categories={categories} />
 </Layout>
-
-<style>
-</style>

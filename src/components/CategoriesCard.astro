@@ -1,0 +1,35 @@
+---
+export interface Props {
+  categories: Array<string>;
+  accueil: {
+    img: Object;
+  };
+}
+const { categories, accueil } = Astro.props;
+---
+
+<div class="section" style="background: #eeeeee">
+  <div class="container">
+    <div class="row">
+      {
+        categories.map((category) => {
+          const img = accueil["img"][category];
+          return (
+            <div class="col-md-4 col-xs-6">
+              <a href={category} class="cta-btn">
+                <div class="shop">
+                  <div class="shop-img">
+                    <img src={img} alt="royal_2.png" />
+                  </div>
+                  <div class="shop-body">
+                    <h3>{category.toUpperCase()}</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</div>
