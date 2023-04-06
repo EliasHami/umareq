@@ -1,5 +1,6 @@
 ---
 import type { Categories, Products } from "../data";
+import { capitalizeFirstLetter } from "./utils";
 
 export interface Props {
   categories: Categories;
@@ -22,7 +23,7 @@ const { categories, products } = Astro.props;
                   return (
                     <li>
                       <a data-toggle="tab" href={`#tab${tabId}`}>
-                        {category.toUpperCase()}
+                        {capitalizeFirstLetter(category)}
                       </a>
                     </li>
                   );
@@ -64,7 +65,7 @@ const { categories, products } = Astro.props;
                                     </div>
                                     <div class="product-body">
                                       <p class="product-category">
-                                        {category.toUpperCase()}
+                                        {capitalizeFirstLetter(category)}
                                       </p>
                                       <h3 class="product-name">
                                         <a href="#">{product.name}</a>
