@@ -28,7 +28,7 @@ const { categories } = Astro.props;
         {
           categories.map((category) => (
             <li>
-              <a href={category}>{category.toUpperCase()}</a>
+              <a href={`categories/${category}`}>{category.toUpperCase()}</a>
             </li>
           ))
         }
@@ -39,7 +39,7 @@ const { categories } = Astro.props;
 </nav>
 <script>
   const currentLocation = location.href;
-  const menuItem = document.querySelectorAll(".nav ul li");
+  const menuItem = document.querySelectorAll("ul.nav li");
 
   menuItem.forEach((item) => {
     if (item.querySelector("a")?.href === currentLocation) {
