@@ -1,9 +1,8 @@
 ---
+import type { Categories, Accueil } from '../data';}
 export interface Props {
-  categories: Array<string>;
-  accueil: {
-    img: Object;
-  };
+  categories: Categories;
+  accueil: Accueil;
 }
 const { categories, accueil } = Astro.props;
 ---

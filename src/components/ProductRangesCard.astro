@@ -1,7 +1,9 @@
 ---
+import type { Categories, Products } from "../data";
+
 export interface Props {
-  categories: Array<string>;
-  products: Object;
+  categories: Categories;
+  products: Products;
 }
 const { categories, products } = Astro.props;
 ---
@@ -16,7 +18,7 @@ const { categories, products } = Astro.props;
             <ul class="section-tab-nav tab-nav">
               {
                 categories.map((category) => {
-                  const tabId = category.replace(" ", "_");
+                  const tabId = category.replaceAll(" ", "_");
                   return (
                     <li>
                       <a data-toggle="tab" href={`#tab${tabId}`}>
@@ -36,7 +38,7 @@ const { categories, products } = Astro.props;
             {
               Object.entries(products).map(
                 ([category, productRanges], index) => {
-                  const tabId = category.replace(" ", "_");
+                  const tabId = category.replaceAll(" ", "_");
                   const classTab = index === 0 ? "tab-pane active" : "tab-pane";
                   return (
                     <div id={`tab${tabId}`} class={classTab}>

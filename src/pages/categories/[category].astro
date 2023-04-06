@@ -1,219 +1,147 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import royalJson from "../../data/royal.json";
-
-const products = royalJson["products"];
-const categories = Object.keys(products);
+import { products, categories } from "../../data";
 
 export async function getStaticPaths() {
-  const products = royalJson["products"];
-  const categories = Object.keys(products);
-
   return categories.map((category) => {
     return {
       params: { category },
-      props: { gammes: products[category] },
+      props: { productRanges: products[category] },
     };
   });
 }
 
 const { category } = Astro.params;
-const { gammes } = Astro.props;
-let allProducts = Object.values(gammes);
-
-console.log({ category, gammes });
+const { productRanges } = Astro.props;
+let allProducts = Object.values(productRanges).flat();
+console.log({ allProducts });
 ---
 
 <Layout categories={categories}>
-  <!-- if (!(isset($_GET["category"]) && in_array($_GET["category"], $categories))) {
-  echo '<h3> Oups ! CATEGORIE INTROUVABLE </h3>';
-  echo '<a href="/">Revenir à l\'accueil -></a>';
-
-} else { -->
-  <!-- BREADCRUMB -->
-  <div id="breadcrumb" class="section">
-    <!-- container -->
-    <div class="container">
-      <!-- row -->
-      <div class="row">
-        <div class="col-md-12">
-          <ul class="breadcrumb-tree">
-            <li><a href="index.php">Accueil</a></li>
-            <li class="active">' . {category?.toUpperCase()} . '</li>
-          </ul>
+  {
+    !category || !categories.includes(category) ? (
+      <>
+        <h3> Oups ! CATEGORIE INTROUVABLE </h3>
+        <a href="/">Revenir à l\'accueil</a>
+      </>
+    ) : (
+      <>
+        <div id="breadcrumb" class="section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="breadcrumb-tree">
+                  <li>
+                    <a href="/">Accueil</a>
+                  </li>
+                  <li class="active">{category?.toUpperCase()}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- /row -->
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /BREADCRUMB -->
-
-  <!-- SECTION -->
-  <div class="section">
-    <!-- container -->
-    <div class="container">
-      <!-- row -->
-      <div class="row">
-        <!-- ASIDE -->
-        <div id="aside" class="col-md-3">
-          <!-- aside Widget -->
-          <div class="aside">
-            <h3 class="aside-title">' . {category?.toUpperCase()} . '</h3>
-            <div class="section-nav">
-              <ul class="section-tab-nav tab-nav custom">
-                '
-                <li class="active">
-                  <a data-toggle="tab" href="#tabTout">Afficher tout</a>
-                </li>
-                {
-                  Object.keys(gammes)?.map((gamme) => {
-                    const tabId = gamme.replace(" ", "_");
-                    return (
-                      <li>
-                        <a data-toggle="tab" href={`#tab . ${tabId} . `}>
-                          {" "}
-                          . {gamme.toUpperCase()} .{" "}
+        <div class="section">
+          <div class="container">
+            <div class="row">
+              <div id="aside" class="col-md-3">
+                <div class="aside">
+                  <h3 class="aside-title">{category?.toUpperCase()}</h3>
+                  <div class="section-nav">
+                    <ul class="section-tab-nav tab-nav custom">
+                      <li class="active">
+                        <a data-toggle="tab" href="#tabTout">
+                          Afficher tout
                         </a>
                       </li>
-                    );
-                  })
-                }
-              </ul>
-            </div>
-          </div>
-          <!-- /aside Widget -->
-
-          <!-- aside Widget -->
-          <!-- <div class="aside">
-                      <h3 class="aside-title">Top selling</h3>
-                      <div class="product-widget">
-                          <div class="product-img">
-                              <img src="./img/product01.png" alt="">
-                          </div>
-                          <div class="product-body">
-                              <p class="product-category">Category</p>
-                              <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                              <h4 class="product-price">$980.00
-                                  <del class="product-old-price">$990.00</del>
-                              </h4>
-                          </div>
-                      </div>
-
-                      <div class="product-widget">
-                          <div class="product-img">
-                              <img src="./img/product02.png" alt="">
-                          </div>
-                          <div class="product-body">
-                              <p class="product-category">Category</p>
-                              <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                              <h4 class="product-price">$980.00
-                                  <del class="product-old-price">$990.00</del>
-                              </h4>
-                          </div>
-                      </div>
-
-                      <div class="product-widget">
-                          <div class="product-img">
-                              <img src="./img/product03.png" alt="">
-                          </div>
-                          <div class="product-body">
-                              <p class="product-category">Category</p>
-                              <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                              <h4 class="product-price">$980.00
-                                  <del class="product-old-price">$990.00</del>
-                              </h4>
-                          </div>
-                      </div>
-                  </div> -->
-          <!-- /aside Widget -->
-        </div>
-        <!-- /ASIDE -->
-
-        <!-- STORE -->
-        <div id="store" class="col-md-9">
-          <!-- store products -->
-          <div class="row">
-            <div class="products-tabs">
-              '
-              {
-                Object.entries(gammes)?.map(([gamme, products]) => {
-                  const tabId = gamme.replace(" ", "_");
-
-                  return (
-                    <div id={`tab${tabId}`} class="tab-pane">
-                      {products?.map((product) => {
+                      {Object.keys(productRanges)?.map((productRange) => {
+                        const tabId = productRange.replaceAll(" ", "_");
                         return (
-                          <div class="col-md-4 col-xs-6">
-                            <a
-                              href={`product.php?category=${category}&product=${product.id}`}
-                            >
-                              <div class="product">
-                                <div class="product-img">
-                                  <img
-                                    src={`/img/${product.img?.[0]}`}
-                                    alt=""
-                                  />
-                                  <div class="product-label">
-                                    <span class="new">NEW</span>
-                                  </div>
-                                </div>
-                                <div class="product-body">
-                                  <p class="product-category">{product.type}</p>
-                                  <h3 class="product-name">
-                                    <a href="#">{product.id}</a>
-                                  </h3>
-                                  <h4 class="product-price">
-                                    {product.PVP} MAD
-                                  </h4>
-                                </div>
-                              </div>
+                          <li>
+                            <a data-toggle="tab" href={`#tab${tabId}`}>
+                              {` ${productRange.toUpperCase()} `}
                             </a>
-                          </div>
+                          </li>
                         );
                       })}
-                    </div>
-                  );
-                })
-              }
-            </div>
-            <div id="tabTout" class="tab-pane active">
-              {
-                allProducts?.map((product) => {
-                  return (
-                    <div class="col-md-4 col-xs-6">
-                      <a
-                        href={`product.php?category=${category}&product=${product.id}`}
-                      >
-                        <div class="product">
-                          <div class="product-img">
-                            <img src={`/img/${product.img?.[0]}`} alt="" />
-                            <div class="product-label">
-                              <span class="new">NEW</span>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="store" class="col-md-9">
+                <div class="row">
+                  <div class="products-tabs">
+                    {Object.entries(productRanges)?.map(
+                      ([productRange, products]) => {
+                        const tabId = productRange.replaceAll(" ", "_");
+                        return (
+                          <div id={`tab${tabId}`} class="tab-pane">
+                            {products?.map((product) => {
+                              return (
+                                <div class="col-md-4 col-xs-6">
+                                  <a href={`/products/${product.id}`}>
+                                    <div class="product">
+                                      <div class="product-img">
+                                        <img
+                                          src={`/img${product.img[0]}`}
+                                          alt=""
+                                        />
+                                        <div class="product-label">
+                                          <span class="new">NEW</span>
+                                        </div>
+                                      </div>
+                                      <div class="product-body">
+                                        <p class="product-category">
+                                          {product.type}
+                                        </p>
+                                        <h3 class="product-name">
+                                          <a href="#">{product.id}</a>
+                                        </h3>
+                                        <h4 class="product-price">
+                                          {product.PVP} MAD
+                                        </h4>
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        );
+                      }
+                    )}
+                  </div>
+                  <div id="tabTout" class="tab-pane active">
+                    {allProducts?.map((product) => {
+                      return (
+                        <div class="col-md-4 col-xs-6">
+                          <a href={`/products/${product.id}`}>
+                            <div class="product">
+                              <div class="product-img">
+                                <img src={`/img/${product.img?.[0]}`} alt="" />
+                                <div class="product-label">
+                                  <span class="new">NEW</span>
+                                </div>
+                              </div>
+                              <div class="product-body">
+                                <p class="product-category">{product.type}</p>
+                                <h3 class="product-name">
+                                  <a href="#">{product.id}</a>
+                                </h3>
+                                <h4 class="product-price">{product.PVP} MAD</h4>
+                              </div>
                             </div>
-                          </div>
-                          <div class="product-body">
-                            <p class="product-category">{product.type}</p>
-                            <h3 class="product-name">
-                              <a href="#">{product.id}</a>
-                            </h3>
-                            <h4 class="product-price">{product.PVP} MAD</h4>
-                          </div>
+                          </a>
                         </div>
-                      </a>
-                    </div>
-                  );
-                })
-              }
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- /store products -->
         </div>
-        <!-- /STORE -->
-      </div>
-      <!-- /row -->
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /SECTION -->'
+      </>
+    )
+  }
 </Layout>

@@ -1,21 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import royalJson from "../data/royal.json";
+import { accueil, products, categories } from "../data";
 import CategoriesCard from "../components/CategoriesCard.astro";
 import HotDeals from "../components/HotDeals.astro";
 import Brand from "../components/Brand.astro";
 import ProductRangesCard from "../components/ProductRangesCard.astro";
-
-if (!royalJson) {
-  // deal with error...
-}
-
-const accueil = royalJson["accueil"];
-
-const products = royalJson["products"];
-
-const categories = Object.keys(products);
-console.log({ products, categories });
 ---
 
 <Layout categories={categories}>
