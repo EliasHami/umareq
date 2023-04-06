@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import royalJson from '../data/royal.json';
+import royalJson from '../../data/royal.json';
 
 export async function getStaticPaths(){
   const products = royalJson['products'];
@@ -9,13 +9,16 @@ export async function getStaticPaths(){
   return categories.map(category => {
     return {
       params: { category },
-      props: { products : products[category]}
+      props: { gammes : products[category]}
     }
   })
 };
 
 const { category } = Astro.params;
-const { products } = Astro.props;
+const { gammes } = Astro.props;
+let allProducts = Object.values(gammes)
+
+console.log({category, gammes})
 ---
 <Layout>
   
@@ -33,7 +36,7 @@ const { products } = Astro.props;
               <div class="col-md-12">
                   <ul class="breadcrumb-tree">
                       <li><a href="index.php">Accueil</a></li>
-                      <li class="active">' . {category.toUpperCase()} . '</li>
+                      <li class="active">' . {category?.toUpperCase()} . '</li>
                   </ul>
               </div>
           </div>
@@ -53,11 +56,11 @@ const { products } = Astro.props;
               <div id="aside" class="col-md-3">
                   <!-- aside Widget -->
                   <div class="aside">
-                      <h3 class="aside-title">' . {category.toUpperCase()} . '</h3>
+                      <h3 class="aside-title">' . {category?.toUpperCase()} . '</h3>
                       <div class="section-nav">
                           <ul class="section-tab-nav tab-nav custom">'
                             <li class="active"><a data-toggle="tab" href="#tabTout">Afficher tout</a></li>
-                            {products.map(gamme => {
+                            {Object.keys(gammes)?.map(gamme => {
                               const tabId = gamme.replace(' ', '_');
                               return <li><a data-toggle="tab" href={`#tab . ${tabId} . `}> . {gamme.toUpperCase()} . </a></li>
                             })}
@@ -117,70 +120,62 @@ const { products } = Astro.props;
 
                   <!-- store products -->
                   <div class="row">
-                      <div class="products-tabs">';
-  $allProducts = array();
-  foreach ($store as $type => $products) {
+                      <div class="products-tabs">'
+                        {
+                          Object.entries(gammes)?.map(([gamme, products]) => {
+                            const tabId = gamme.replace(' ', '_');
 
-      $tabId = str_replace(' ', '_', $type);
-      echo ' <!-- tab --><div id="tab' . $tabId . '" class="tab-pane">';
-      foreach ($products as $product) {
-          $allProducts[] = $product;
-          echo ' <!-- product -->
-                          <div class="col-md-4 col-xs-6">
-                              <a href="product.php?category=' . $category . '&product=' . $product['id'] . '">
-                              <div class="product">
-                                  <div class="product-img">
-                                      <img src="' . $product['img'][0] . '" alt="">
+                            return (
+                              <div id={`tab${tabId}`} class="tab-pane">
+                                {
+                                  products?.map(product => {
+                                    return (
+                                      <div class="col-md-4 col-xs-6">
+                                        <a href={`product.php?category=${category}&product=${product.id}`}>
+                                          <div class="product">
+                                            <div class="product-img">
+                                              <img src={product.img?.[0]} alt="">
+                                              <div class="product-label">
+                                                <span class="new">NEW</span>
+                                              </div>
+                                            </div>
+                                            <div class="product-body">
+                                              <p class="product-category">{product.type}</p>
+                                              <h3 class="product-name"><a href="#">{product.id}</a></h3>
+                                              <h4 class="product-price">{product.PVP} MAD</h4>
+                                            </div>
+                                          </div>
+                                        </a>
+                                      </div>)
+                                  })
+                                }
+                              </div>)
+                          })
+                        }
+                      </div>
+                        <div id="tabTout" class="tab-pane active">
+                          {
+                            allProducts?.map(product => {
+                              return <div class="col-md-4 col-xs-6">
+                                <a href={`product.php?category=${category}&product=${product.id}`}>
+                                  <div class="product">
+                                    <div class="product-img">
+                                      <img src={product.img?.[0]} alt="">
                                       <div class="product-label">
-                                         <!-- <span class="sale">-30%</span>-->
-                                          <span class="new">NEW</span>
+                                        <span class="new">NEW</span>
                                       </div>
+                                    </div>
+                                    <div class="product-body">
+                                      <p class="product-category">{product.type}</p>
+                                      <h3 class="product-name"><a href="#">{product.id}</a></h3>
+                                      <h4 class="product-price">{product.PVP} MAD</h4>
+                                    </div>
                                   </div>
-                                  <div class="product-body">
-                                      <p class="product-category">' . $product['type'] . '</p>
-                                      <h3 class="product-name"><a href="#">' . $product['id'] . '</a></h3>
-                                      <h4 class="product-price">' . $product['PVP'] . ' MAD
-                                          <!--<del class="product-old-price">$990.00</del>-->
-                                      </h4>
-                                  </div>
-
+                                </a>
                               </div>
-                              </a>
-                          </div>
-                              <!-- /product -->';
-      }
-
-      echo ' </div><!-- /tab -->';
-  }
-  echo ' <!-- tab --><div id="tabTout" class="tab-pane active">';
-  foreach ($allProducts as $product) {
-      echo ' <!-- product -->
-                          <div class="col-md-4 col-xs-6">
-                          <a href="product.php?category=' . $category . '&product=' . $product['id'] . '">
-                              <div class="product">
-                                  <div class="product-img">
-                                      <img src="' . $product['img'][0] . '" alt="">
-                                      <div class="product-label">
-                                         <!-- <span class="sale">-30%</span>-->
-                                          <span class="new">NEW</span>
-                                      </div>
-                                  </div>
-                                  <div class="product-body">
-                                      <p class="product-category">' . $product['type'] . '</p>
-                                      <h3 class="product-name"><a href="#">' . $product['id'] . '</a></h3>
-                                      <h4 class="product-price">' . $product['PVP'] . ' MAD
-                                          <!--<del class="product-old-price">$990.00</del>-->
-                                      </h4>
-                                  </div>
-
-                              </div>
-                              </a>
-                          </div>
-                              <!-- /product -->';
-  }
-  echo ' </div><!-- /tab -->';
-  echo '</div>
-
+                            })
+                          }
+                        </div>
                   </div>
                   <!-- /store products -->
               </div>
@@ -190,6 +185,5 @@ const { products } = Astro.props;
       </div>
       <!-- /container -->
   </div>
-  <!-- /SECTION -->';
-}
+  <!-- /SECTION -->'
 </Layout>

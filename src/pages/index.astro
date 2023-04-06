@@ -140,8 +140,8 @@ console.log({stores, categories})
               <div class="row">
                   <div class="products-tabs">
                       {
-                        Object.entries(stores).map(([key, store], index) => {
-                          const tabId = key.replace(" ", "_");
+                        Object.entries(stores).map(([category, store], index) => {
+                          const tabId = category.replace(" ", "_");
                           const classTab = index === 0 ? 'tab-pane active' : 'tab-pane';
                           return (
                             <div id={`tab${tabId}`} class={classTab}>
@@ -153,7 +153,7 @@ console.log({stores, categories})
                                      { products.map(product => {
                                         return (
                                           <div class="product">
-                                            <a href={`product.php?category=${key}&product=${product.id}`}>
+                                            <a href={`product.php?category=${category}&product=${product.id}`}>
                                               <div class="product-img">
                                                   <img src={product.img[0]} alt="">
                                                   <div class="product-label">
@@ -162,7 +162,7 @@ console.log({stores, categories})
                                                   </div>
                                               </div>
                                               <div class="product-body">
-                                                  <p class="product-category">{key.toUpperCase()}</p>
+                                                  <p class="product-category">{category.toUpperCase()}</p>
                                                   <h3 class="product-name"><a href="#">{product.name}</a></h3>
                                                   <h4 class="product-price">{product.price} DH <del class="product-old-price">{product.oldPrice} DH</del></h4>
                                                   <div class="product-rating">
