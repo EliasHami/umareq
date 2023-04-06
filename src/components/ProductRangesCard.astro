@@ -18,10 +18,12 @@ const { categories, products } = Astro.props;
           <div class="section-nav">
             <ul class="section-tab-nav tab-nav">
               {
-                categories.map((category) => {
+                categories.map((category, index) => {
                   const tabId = category.replaceAll(" ", "_");
+                  const classTab = index === 0 ? "tab-pane active" : "tab-pane";
+
                   return (
-                    <li>
+                    <li class={classTab}>
                       <a data-toggle="tab" href={`#tab${tabId}`}>
                         {capitalizeFirstLetter(category)}
                       </a>

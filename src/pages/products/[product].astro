@@ -1,0 +1,135 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { categories, productList } from "../../data";
+import { capitalizeFirstLetter } from "../../components/utils";
+
+export async function getStaticPaths() {
+  return productList.map((product) => {
+    return {
+      params: {
+        product: product.id,
+      },
+      props: {
+        productItem: product,
+        category: product.category,
+        range: product.range,
+      },
+    };
+  });
+}
+const { productItem, category, range } = Astro.props;
+const imgs = productItem["img"];
+const description = productItem["description"];
+const shuffledProducts = productList
+  .filter((p) => p.category === category)
+  .sort((a, b) => 0.5 - Math.random())
+  .slice(0, 4);
+---
+
+<Layout categories={categories}>
+  <div id="breadcrumb" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="breadcrumb-tree">
+            <li><a href="/">Accueil</a></li>
+            <li>
+              <a href={`/categories/${category}`}
+                >{capitalizeFirstLetter(category)}</a
+              >
+            </li>
+            <li class="active">{capitalizeFirstLetter(productItem["id"])}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-md-push-2">
+          <div id="product-main-img">
+            {
+              imgs.map((img) => {
+                return (
+                  <div class="product-preview">
+                    <img src={`/img/${img}`} alt="" />
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
+        <div class="col-md-2 col-md-pull-5">
+          <div id="product-imgs">
+            {
+              imgs.map((img) => {
+                return (
+                  <div class="product-preview">
+                    <img src={`/img/${img}`} alt="" />
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="product-details">
+            <h2 class="product-name">{productItem["id"]}</h2>
+            <p class="product-category">{productItem["type"]}</p>
+            <div>
+              <h3 class="product-price">{`${productItem["PVP"]} MAD`}</h3>
+              {
+                productItem["etat"] ? (
+                  <span class="product-available">En stock</span>
+                ) : (
+                  <del class="product-unavailable">En stock</del>
+                )
+              }
+            </div><ul class="productDesc">
+              {
+                description.map((desc) => {
+                  return <li>{desc}</li>;
+                })
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title text-center">
+            <h3 class="title">Ça peut vous interésser</h3>
+          </div>
+        </div>
+        {
+          shuffledProducts.map((product) => {
+            return (
+              <div class="col-md-3 col-xs-6">
+                <a href={`/products/${product["id"]}`}>
+                  <div class="product">
+                    <div class="product-img">
+                      <img src={`/img/${product["img"][0]}`} alt="" />
+                      <div class="product-label">
+                        <span class="new">NEW</span>
+                      </div>
+                    </div>
+                    <div class="product-body">
+                      <p class="product-category">{product["type"]}</p>
+                      <h3 class="product-name">{product["id"]}</h3>
+                      <h4 class="product-price">{`${product["PVP"]} MAD`}</h4>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+</Layout>

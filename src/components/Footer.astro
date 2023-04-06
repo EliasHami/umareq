@@ -50,7 +50,8 @@ const { categories } = Astro.props;
               <li><a href="#"><i class="fa fa-phone"></i> +212661664475</a></li>
               <li>
                 <a href="mailto:contact@royal.umareq.com"
-                  ><i class="fa fa-envelope-o"></i> contact@royal.umareq.com</a>
+                  ><i class="fa fa-envelope-o"></i> contact@royal.umareq.com</a
+                >
               </li>
             </ul>
           </div>
@@ -66,7 +67,7 @@ const { categories } = Astro.props;
                 categories.map((category) => {
                   return (
                     <li>
-                      <a href="store.php?category={category}">{category}</a>
+                      <a href={`/categories/${category}`}>{category}</a>
                     </li>
                   );
                 })

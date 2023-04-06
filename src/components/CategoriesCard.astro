@@ -1,5 +1,5 @@
 ---
-import type { Categories, Accueil } from '../data';}
+import type { Categories, Accueil } from "../data";
 export interface Props {
   categories: Categories;
   accueil: Accueil;
@@ -15,7 +15,7 @@ const { categories, accueil } = Astro.props;
           const img = accueil["img"][category];
           return (
             <div class="col-md-4 col-xs-6">
-              <a href={category} class="cta-btn">
+              <a href={`/categories/${category}`} class="cta-btn">
                 <div class="shop">
                   <div class="shop-img">
                     <img src={`/img/${img}`} alt="royal_2.png" />
