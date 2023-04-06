@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Navigation from "../components/Navigation.astro";
-
+import Footer from "../components/Footer.astro";
 const { categories } = Astro.props;
 
 console.log("layout", { categories });
@@ -57,11 +57,12 @@ console.log("layout", { categories });
     <Header />
     <Navigation categories={categories} />
     <slot />
-    <script src="/src/libs/jquery.min.js"></script>
-    <script src="/src/libs/bootstrap.min.js"></script>
-    <script src="/src/libs/slick.min.js"></script>
-    <script src="/src/libs/nouislider.min.js"></script>
-    <script src="/src/libs/jquery.zoom.min.js"></script>
-    <script src="/src/libs/main.js"></script>
+    <Footer categories={categories} />
+    <script is:inline src="/libs/jquery.min.js"></script>
+    <script is:inline src="/libs/bootstrap.min.js"></script>
+    <script is:inline src="/libs/slick.min.js"></script>
+    <script is:inline src="/libs/nouislider.min.js"></script>
+    <script is:inline src="/libs/jquery.zoom.min.js"></script>
+    <script is:inline src="/libs/main.js"></script>
   </body>
 </html>
