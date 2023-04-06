@@ -1,6 +1,6 @@
 {
-  "accueil":{
-    "img":{
+  "accueil": {
+    "img": {
       "Lavage": "/lavage/accueil.jpg",
       "Froid": "/froid/accueil.jpg",
       "Cuisson": "/cuisson/accueil.jpg",
@@ -20,10 +20,7 @@
           "PVP": 1899,
           "type": "Automatique 8.2 kg",
           "etat": true,
-          "img": [
-            "/lavage/WTP-820.jpg",
-            "/lavage/WTP-820-.jpg"
-          ],
+          "img": ["/lavage/WTP-820.jpg", "/lavage/WTP-820-.jpg"],
           "description": [
             "Capacité de lavage 8.2 kg Avec pompe",
             "Deux entrée d’eau (chaud et froid)",
@@ -38,10 +35,7 @@
           "PVP": 2299,
           "type": "Automatique 7 kg",
           "etat": true,
-          "img": [
-            "/lavage/WD7100W.jpg",
-            "/lavage/WD7100W--Blanc.jpg"
-          ],
+          "img": ["/lavage/WD7100W.jpg", "/lavage/WD7100W--Blanc.jpg"],
           "description": [
             "Couleur :  Blanc",
             "Ecran LED",
@@ -56,9 +50,7 @@
           "PVP": 2399,
           "type": "Automatique 7 kg",
           "etat": true,
-          "img": [
-            "/lavage/WD-7100S.jpg"
-          ],
+          "img": ["/lavage/WD-7100S.jpg"],
           "description": [
             "Couleur : Silver",
             "Ecran LED",
@@ -73,10 +65,7 @@
           "PVP": 2999,
           "type": "Automatique 9 kg",
           "etat": true,
-          "img": [
-            "/lavage/WD9120S.jpg",
-            "/lavage/WD9120S--Silver.jpg"
-          ],
+          "img": ["/lavage/WD9120S.jpg", "/lavage/WD9120S--Silver.jpg"],
           "description": [
             "Couleur : Silver",
             "Capacité 9kg",
@@ -92,10 +81,7 @@
           "PVP": 3599,
           "type": "Automatique 10 kg",
           "etat": true,
-          "img": [
-            "/lavage/WI10140S.jpg",
-            "/lavage/WI10140S--Silver.jpg"
-          ],
+          "img": ["/lavage/WI10140S.jpg", "/lavage/WI10140S--Silver.jpg"],
           "description": [
             "Couleur : Silver",
             "Ecran LED",
@@ -112,9 +98,7 @@
           "PVP": 399,
           "type": "Semi-automatique 3 kg",
           "etat": true,
-          "img": [
-            "/lavage/RS-30.jpg"
-          ],
+          "img": ["/lavage/RS-30.jpg"],
           "description": [
             "Capacité de lavage 3 kg avec essorage",
             "Panier fonction essorage",
@@ -127,9 +111,7 @@
           "PVP": 459,
           "type": "Semi-automatique 4 kg",
           "etat": true,
-          "img": [
-            "/lavage/RS-40.jpg"
-          ],
+          "img": ["/lavage/RS-40.jpg"],
           "description": [
             "Capacité de lavage 4 kg avec essorage",
             "Panier fonction essorage",
@@ -143,9 +125,7 @@
           "PVP": 899,
           "type": "Semi-automatique 10 kg",
           "etat": true,
-          "img": [
-            "/lavage/RS-100.jpg"
-          ],
+          "img": ["/lavage/RS-100.jpg"],
           "description": [
             "Capacité de lavage 10 kg sans essorage",
             "Temps de lavage : 15 min",
@@ -161,9 +141,7 @@
           "PVP": 1199,
           "type": "Semi-automatique 9 kg",
           "etat": true,
-          "img": [
-            "/lavage/RMB-90.jpg"
-          ],
+          "img": ["/lavage/RMB-90.jpg"],
           "description": [
             "Capacité de lavage 9 kg avec essorage",
             "Temps de lavage : 15 min - Temps d’essorage : 5 min",
@@ -178,9 +156,7 @@
           "PVP": 1199,
           "type": "Semi-automatique 8 kg",
           "etat": true,
-          "img": [
-            "/lavage/RMY-80.jpg"
-          ],
+          "img": ["/lavage/RMY-80.jpg"],
           "description": [
             "Capacité de lavage 8 kg avec essorage",
             "Temps de lavage : 15 min - Temps d’essorage : 5 min",
@@ -195,9 +171,7 @@
           "PVP": 1299,
           "type": "Semi-automatique 9 kg",
           "etat": true,
-          "img": [
-            "/lavage/RMY-90.jpg"
-          ],
+          "img": ["/lavage/RMY-90.jpg"],
           "description": [
             "Capacité de lavage 9 kg avec essorage",
             "Temps de lavage : 15 min - Temps d’essorage : 5 min",
@@ -212,9 +186,7 @@
           "PVP": 1499,
           "type": "Semi-automatique 12 kg",
           "etat": true,
-          "img": [
-            "/lavage/RMY-120.jpg"
-          ],
+          "img": ["/lavage/RMY-120.jpg"],
           "description": [
             "Capacité de lavage 12 kg avec essorage",
             "Temps de lavage : 15 min - Temps d’essorage : 5 min",
@@ -229,9 +201,7 @@
           "PVP": 1199,
           "type": "Semi-automatique 9 kg",
           "etat": true,
-          "img": [
-            "/lavage/RMX-90.jpg"
-          ],
+          "img": ["/lavage/RMX-90.jpg"],
           "description": [
             "Capacité de lavage 9 kg avec essorage",
             "Temps de lavage : 10 min - Temps d’essorage : 5 min",
@@ -246,9 +216,7 @@
           "PVP": 1399,
           "type": "Semi-automatique 11 kg",
           "etat": true,
-          "img": [
-            "/lavage/RMX-110.jpg"
-          ],
+          "img": ["/lavage/RMX-110.jpg"],
           "description": [
             "Capacité de lavage 11 kg avec essorage",
             "Temps de lavage : 10 min - Temps d’essorage : 5 min",
@@ -263,9 +231,7 @@
           "PVP": 1499,
           "type": "Semi-automatique 13 kg",
           "etat": true,
-          "img": [
-            "/lavage/RMX-130.jpg"
-          ],
+          "img": ["/lavage/RMX-130.jpg"],
           "description": [
             "Capacité de lavage 13 kg avec essorage",
             "Temps de lavage : 10 min - Temps d’essorage : 5 min",
@@ -284,9 +250,7 @@
           "PVP": 1299,
           "type": "Mini Bar 50 L",
           "etat": true,
-          "img": [
-            "/froid/BC-55-SM.jpg"
-          ],
+          "img": ["/froid/BC-55-SM.jpg"],
           "description": [
             "Couleur : Silver",
             "Classe énergétique : A",
@@ -299,9 +263,7 @@
           "PVP": 1599,
           "type": "MINI BAR 100 L",
           "etat": true,
-          "img": [
-            "/froid/BC-95-SM.jpg"
-          ],
+          "img": ["/froid/BC-95-SM.jpg"],
           "description": [
             "Couleur : Silver",
             "Classe énergétique : A",
@@ -316,10 +278,7 @@
           "PVP": 2599,
           "type": "REFREGIRATEUR 280 L",
           "etat": true,
-          "img": [
-            "/froid/RM-280-S.jpg",
-            "/froid/RM-280-S-.jpg"
-          ],
+          "img": ["/froid/RM-280-S.jpg", "/froid/RM-280-S-.jpg"],
           "description": [
             "Couleur : Silver",
             "Classe énergétique : A+",
@@ -332,10 +291,7 @@
           "PVP": 8999,
           "type": "SIDE BY SIDE 690 L",
           "etat": true,
-          "img": [
-            "/froid/ST-690-X.jpg",
-            "/froid/ST-690-X-.jpg"
-          ],
+          "img": ["/froid/ST-690-X.jpg", "/froid/ST-690-X-.jpg"],
           "description": [
             "Couleur : Inox",
             "Classe énergétique : A+",
@@ -354,9 +310,7 @@
           "PVP": 1699,
           "type": "CONGELATEUR COFFRE 160 L",
           "etat": true,
-          "img": [
-            "/froid/CH-160-XS.jpg"
-          ],
+          "img": ["/froid/CH-160-XS.jpg"],
           "description": [
             "Couleur : Silver",
             "Classe énergétique : A",
@@ -373,9 +327,7 @@
           "PVP": 1899,
           "type": "CONGELATEUR COFFRE 250 L",
           "etat": true,
-          "img": [
-            "/froid/CH-250-XS.jpg"
-          ],
+          "img": ["/froid/CH-250-XS.jpg"],
           "description": [
             "Couleur : Silver",
             "Classe énergétique : A",
@@ -392,9 +344,7 @@
           "PVP": 2199,
           "type": "CONGELATEUR COFFRE 300 L",
           "etat": true,
-          "img": [
-            "/froid/CH-300-XS.jpg"
-          ],
+          "img": ["/froid/CH-300-XS.jpg"],
           "description": [
             "Couleur : Silver",
             "Classe énergétique : A",
@@ -411,10 +361,7 @@
           "PVP": 2999,
           "type": "CONGELATEUR COFFRE 300 L",
           "etat": true,
-          "img": [
-            "/froid/CV-300-S.jpg",
-            "/froid/CV-300-S-.jpg"
-          ],
+          "img": ["/froid/CV-300-S.jpg", "/froid/CV-300-S-.jpg"],
           "description": [
             "Couleur : Silver",
             "Classe énergétique : A",
@@ -424,10 +371,8 @@
             "Pieds ajustables",
             "Serrure",
             "Dimensions : 545x 542 x 1450"
-             
           ]
         }
-        
       ]
     },
     "Cuisson": {
@@ -437,9 +382,7 @@
           "PVP": 1199,
           "type": "Cuisinière 50x50 cm",
           "etat": true,
-          "img": [
-            "/cuisson/3405-NGW.jpg"
-          ],
+          "img": ["/cuisson/3405-NGW.jpg"],
           "description": [
             "Plaque d’âtre  en inox",
             "Four avec allumage simultané",
@@ -457,9 +400,7 @@
           "PVP": 1299,
           "type": "Cuisinière 50x50 cm",
           "etat": true,
-          "img": [
-            "/cuisson/3405-NGK.jpg"
-          ],
+          "img": ["/cuisson/3405-NGK.jpg"],
           "description": [
             "Couleur : Noir",
             "Four avec allumage simultané",
@@ -472,7 +413,6 @@
             "Dimensions : 500 x 520 x 890"
           ]
         }
-        
       ],
       "Cuisinière 60x60 cm": [
         {
@@ -480,9 +420,7 @@
           "PVP": 1699,
           "type": "Cuisinière 60x60 cm",
           "etat": true,
-          "img": [
-            "/cuisson/6111-NGI.jpg"
-          ],
+          "img": ["/cuisson/6111-NGI.jpg"],
           "description": [
             "Couleur : Inox",
             "Four avec allumage simultané",
@@ -500,9 +438,7 @@
           "PVP": 1999,
           "type": "Cuisinière 60x60 cm",
           "etat": true,
-          "img": [
-            "/cuisson/6433 NGI.jpg"
-          ],
+          "img": ["/cuisson/6433 NGI.jpg"],
           "description": [
             "Couleur : Inox",
             "Allumage électrique",
@@ -516,7 +452,6 @@
             "Dimensions : 600 x 600 x 890"
           ]
         }
-        
       ],
       "Cuisinière 90x60 cm": [
         {
@@ -524,9 +459,7 @@
           "PVP": 3399,
           "type": "Cuisinière cache bouteille 90x60 cm",
           "etat": true,
-          "img": [
-            "/cuisson/9601-NGB.jpg"
-          ],
+          "img": ["/cuisson/9601-NGB.jpg"],
           "description": [
             "Couleur : Blanc",
             "5 Feux à gaz avec allumage électrique",
@@ -545,9 +478,7 @@
           "PVP": 3599,
           "type": "Cuisinière cache bouteille 90x60 cm",
           "etat": true,
-          "img": [
-            "/cuisson/9601-NGBI.jpg"
-          ],
+          "img": ["/cuisson/9601-NGBI.jpg"],
           "description": [
             "Couleur : Inox",
             "5 Feux à gaz avec allumage électrique",
@@ -566,9 +497,7 @@
           "PVP": 3699,
           "type": "Cuisinière four géant 90x60 cm",
           "etat": true,
-          "img": [
-            "/cuisson/9601-NPI.jpg"
-          ],
+          "img": ["/cuisson/9601-NPI.jpg"],
           "description": [
             "Couleur : Inox",
             "Semi-professionnel",
@@ -587,9 +516,7 @@
           "PVP": 4599,
           "type": "Cuisinière 90x60 cm",
           "etat": true,
-          "img": [
-            "/cuisson/9520BXF.jpg"
-          ],
+          "img": ["/cuisson/9520BXF.jpg"],
           "description": [
             "Couleur : Inox",
             "5 Feux à gaz",
@@ -609,9 +536,7 @@
           "PVP": 4999,
           "type": "Cuisinière 90x60 cm",
           "etat": true,
-          "img": [
-            "/cuisson/9620XF.jpg"
-          ],
+          "img": ["/cuisson/9620XF.jpg"],
           "description": [
             "Couleur : Inox",
             "5 Feux à gaz avec allumage électrique",
@@ -626,7 +551,6 @@
             "Dimensions : 900 x 600 x 850"
           ]
         }
-        
       ]
     },
     "Encastrable": {
@@ -636,9 +560,7 @@
           "PVP": 0,
           "type": "Hotte 60 cm",
           "etat": true,
-          "img": [
-            "/encastrable/F-6.jpg"
-          ],
+          "img": ["/encastrable/F-6.jpg"],
           "description": [
             "Couleur : Blanc",
             "3 Niveaux de puissance",
@@ -652,9 +574,7 @@
           "PVP": 699,
           "type": "Hotte 60 cm inox",
           "etat": true,
-          "img": [
-            "/encastrable/KO-830-inox.jpg"
-          ],
+          "img": ["/encastrable/KO-830-inox.jpg"],
           "description": [
             "Couleur : Inox",
             "3 Niveaux de puissance",
@@ -670,9 +590,7 @@
           "PVP": 1099,
           "type": "Hotte 60 cm inox",
           "etat": true,
-          "img": [
-            "/encastrable/dp-6-inox.jpg"
-          ],
+          "img": ["/encastrable/dp-6-inox.jpg"],
           "description": [
             "Couleur : Inox",
             "3 Niveaux de puissance",
@@ -723,8 +641,6 @@
             "Filtres en aluminium lavables"
           ]
         }
-        
-        
       ],
       "Plaque": [
         {
@@ -732,9 +648,7 @@
           "PVP": 799,
           "type": "Plaque 4 feux inox",
           "etat": true,
-          "img": [
-            "/encastrable/LX-410.jpg"
-          ],
+          "img": ["/encastrable/LX-410.jpg"],
           "description": [
             "Couleur : Inox",
             "4 Brûleur à gaz type SABAF",
@@ -747,9 +661,7 @@
           "PVP": 1499,
           "type": "Plaque 4 feux",
           "etat": true,
-          "img": [
-            "/encastrable/LX-40TAHD--Blanc.jpg"
-          ],
+          "img": ["/encastrable/LX-40TAHD--Blanc.jpg"],
           "description": [
             "Couleur : Blanc",
             "4 Brûleur à gaz type SABAF",
@@ -757,7 +669,6 @@
             "Largeur : 60 cm"
           ]
         }
-      
       ],
       "Four": [
         {
@@ -765,9 +676,7 @@
           "PVP": 699,
           "type": "Four 60 cm Multifonctions",
           "etat": true,
-          "img": [
-            "/encastrable/B6002ZERW.jpg"
-          ],
+          "img": ["/encastrable/B6002ZERW.jpg"],
           "description": [
             "Couleur : Blanc",
             "Capacité : 64L",
@@ -784,9 +693,7 @@
           "PVP": 2999,
           "type": "Four 60 cm noir Multifonctions",
           "etat": true,
-          "img": [
-            "/encastrable/A6-SF2-(DDT)--Noir.jpg"
-          ],
+          "img": ["/encastrable/A6-SF2-(DDT)--Noir.jpg"],
           "description": [
             "Couleur : Noir",
             "Capacité : 64L",
@@ -841,12 +748,8 @@
             "Effet miroir"
           ]
         }
-        
-        
       ]
-      
     },
-    
     "Nouveautés": {
       "la gamme TV": [
         {
@@ -854,15 +757,8 @@
           "PVP": 5000,
           "type": " 8K",
           "etat": true,
-          "img": [
-            "/TV/www.jpg"
-          ],
-          "description": [
-            "wVV",
-            "wVVV",
-            "wwVV",
-            "VVV"
-          ]
+          "img": ["/TV/www.jpg"],
+          "description": ["wVV", "wVVV", "wwVV", "VVV"]
         }
       ],
       "la gamme FROID ": [
@@ -871,9 +767,7 @@
           "PVP": 10000,
           "type": "ROYAl",
           "etat": true,
-          "img": [
-            "/TV/wwwww.jpg"
-          ],
+          "img": ["/TV/wwwww.jpg"],
           "description": [
             "Couleur : Silver",
             "Classe énergétique : ....",
@@ -881,13 +775,8 @@
             "Dimensions : ......."
           ]
         }
-        
       ]
     },
-    
-    
-    
-    
     "Confort": {
       "la gamme chauffage": [
         {
@@ -895,9 +784,7 @@
           "PVP": 499,
           "type": "Chauffage Convecteur 2500W",
           "etat": true,
-          "img": [
-            "/confort/HC-2947.jpg"
-          ],
+          "img": ["/confort/HC-2947.jpg"],
           "description": [
             "Puissance 2 500 W",
             "Possibilité de montage au mur",
@@ -913,9 +800,7 @@
           "PVP": 199,
           "type": "Chauffage Halogène 1500W",
           "etat": true,
-          "img": [
-            "/confort/LX-2820.jpg"
-          ],
+          "img": ["/confort/LX-2820.jpg"],
           "description": [
             "1 500 W",
             "3 tubes de quartz",
@@ -928,9 +813,7 @@
           "PVP": 399,
           "type": "Chauffage Halogène 1800W",
           "etat": true,
-          "img": [
-            "/confort/LX-2831.jpg"
-          ],
+          "img": ["/confort/LX-2831.jpg"],
           "description": [
             "Puissance : 1 800 W",
             "Thermostat réglable",
@@ -945,9 +828,7 @@
           "PVP": 299,
           "type": "Chauffage Souflant 2000W",
           "etat": true,
-          "img": [
-            "/confort/LX-6331T.jpg"
-          ],
+          "img": ["/confort/LX-6331T.jpg"],
           "description": [
             "Puissance : 2 000 W",
             "Fonctionne sur 3 différents",
@@ -964,15 +845,13 @@
           "PVP": 1099,
           "type": "Chauffe eau éléctrique - 35 Litres",
           "etat": true,
-          "img": [
-            "/confort/whr-35-s.jpg"
-          ],
+          "img": ["/confort/whr-35-s.jpg"],
           "description": [
             "Indicateur : blue wave",
-           "Couleur : silver",
-           "Capacite 35 lt",
-           "Wall br acket",
-           "Safety valve"
+            "Couleur : silver",
+            "Capacite 35 lt",
+            "Wall br acket",
+            "Safety valve"
           ]
         },
         {
@@ -980,9 +859,7 @@
           "PVP": 1299,
           "type": "Chauffe eau éléctrique - 50 Litres",
           "etat": true,
-          "img": [
-            "/confort/whr-50-s.jpg"
-          ],
+          "img": ["/confort/whr-50-s.jpg"],
           "description": [
             "Indicateur : blue wave ",
             "Couleur : silver",
@@ -991,7 +868,6 @@
             "Safety valve"
           ]
         }
-        
       ],
       "la gamme climatiseur": [
         {
@@ -999,9 +875,7 @@
           "PVP": 3099,
           "type": "Climatiseur mural - 9000BTU",
           "etat": true,
-          "img": [
-            "/confort/KAC-9GHA.jpg"
-          ],
+          "img": ["/confort/KAC-9GHA.jpg"],
           "description": [
             "9000 BTU",
             "R410A 220 V - 50 Hz",
@@ -1015,9 +889,7 @@
           "PVP": 3599,
           "type": "Climatiseur mural - 12000BTU",
           "etat": true,
-          "img": [
-            "/confort/KAC-12GHA.jpg"
-          ],
+          "img": ["/confort/KAC-12GHA.jpg"],
           "description": [
             "12000 BTU",
             "R410A 220 V - 50 Hz",
@@ -1026,8 +898,6 @@
             "Avec un tuyau en cuivre de 3 m"
           ]
         }
-        
-        
       ],
       "la gamme ventilateur": [
         {
@@ -1035,10 +905,7 @@
           "PVP": 299,
           "type": "Ventilateur sur pied - 3 Vitesses",
           "etat": true,
-          "img": [
-            "/confort/VR300B.jpg"
-            
-          ],
+          "img": ["/confort/VR300B.jpg"],
           "description": [
             "Puissance 45 Watts",
             "Angle d'oscillation 90°",
@@ -1046,8 +913,6 @@
             "Tête inclinable 70°"
           ]
         }
-        
-        
       ]
     },
     "TV": {
@@ -1057,9 +922,7 @@
           "PVP": 1899,
           "type": "FLAT 32'",
           "etat": true,
-          "img": [
-            "/TV/FL-32-SA.jpg"
-          ],
+          "img": ["/TV/FL-32-SA.jpg"],
           "description": [
             "Taille de l'écran : 32' Diagonal",
             "Aspect ratio : 16:9",
@@ -1071,18 +934,14 @@
             "ANTENNE x2 - USB x 2- HDMI x 3- AUDIO (L/R) x 1- VIDEO x 1- RJ45 x 1- CI card In x1",
             "Borne de sortie :",
             "ECOUTEUR x1- COAXIAL x 1"
-            
           ]
         },
-      
         {
           "id": "FL 43 SA",
           "PVP": 2999,
           "type": "FLAT 43'",
           "etat": true,
-          "img": [
-            "/TV/FL-43-SA.jpg"
-          ],
+          "img": ["/TV/FL-43-SA.jpg"],
           "description": [
             "Taille de l'écran : 43' Diagonal",
             "Aspect ratio : 16:9",
@@ -1096,15 +955,13 @@
             "ECOUTEUR x1- COAXIAL x 1"
           ]
         },
-        
-         {
+
+        {
           "id": "FL 55 SV",
           "PVP": 4999,
           "type": "FLAT 55'",
           "etat": true,
-          "img": [
-            "/TV/FL-55-SV.jpg"
-          ],
+          "img": ["/TV/FL-55-SV.jpg"],
           "description": [
             "Taille de l'écran : 55' Diagonal",
             "Aspect ratio : 16:9",
@@ -1118,26 +975,18 @@
             "ECOUTEUR x1- COAXIAL x 1"
           ]
         }
-        
       ]
     },
-    
-     "Promotion": {
+
+    "Promotion": {
       "la gamme TV": [
         {
           "id": "tv 4K",
           "PVP": 4000,
           "type": " 4K",
           "etat": true,
-          "img": [
-            "/TV/www.jpg"
-          ],
-          "description": [
-            "wVV",
-            "wVVV",
-            "wwVV",
-            "VVV"
-          ]
+          "img": ["/TV/www.jpg"],
+          "description": ["wVV", "wVVV", "wwVV", "VVV"]
         }
       ],
       "la gamme FROID ": [
@@ -1146,9 +995,7 @@
           "PVP": 8000,
           "type": "ROYAl fr",
           "etat": true,
-          "img": [
-            "/TV/wwwww.jpg"
-          ],
+          "img": ["/TV/wwwww.jpg"],
           "description": [
             "Couleur : Silver",
             "Classe énergétique : ....",
@@ -1156,10 +1003,9 @@
             "Dimensions : ......."
           ]
         }
-        
       ]
     },
-    
+
     "Petit Electro": {
       "Four": [
         {
@@ -1186,9 +1032,7 @@
           "PVP": 599,
           "type": "Four 50 L",
           "etat": true,
-          "img": [
-            "/petit_electro/FEB-50.jpg"
-          ],
+          "img": ["/petit_electro/FEB-50.jpg"],
           "description": [
             "Couleur : Silver",
             "Puissance : 1300 w",
@@ -1204,9 +1048,7 @@
           "PVP": 1199,
           "type": "Four 70 L",
           "etat": true,
-          "img": [
-            "/petit_electro/FEB-70.jpg"
-          ],
+          "img": ["/petit_electro/FEB-70.jpg"],
           "description": [
             "Couleur : Inox",
             "Puissance : 2500 w",
@@ -1219,7 +1061,6 @@
             "Dimensions : 590 x 300 x 390"
           ]
         }
-        
       ],
       "PEM": [
         {
@@ -1227,9 +1068,7 @@
           "PVP": 399,
           "type": "Aspirateur sans sac 1600w",
           "etat": true,
-          "img": [
-            "/petit_electro/VY-16.jpg"
-          ],
+          "img": ["/petit_electro/VY-16.jpg"],
           "description": [
             "Capacité de poussière : 1.8 L",
             "Longueur du câble : 5 m",
@@ -1244,9 +1083,7 @@
           "PVP": 229,
           "type": "Belender",
           "etat": true,
-          "img": [
-            "/petit_electro/RL-125.jpg"
-          ],
+          "img": ["/petit_electro/RL-125.jpg"],
           "description": [
             "Puissance 350 w",
             "Pichet en verre de 1,5 L",
@@ -1263,9 +1100,7 @@
           "PVP": 249,
           "type": "barbecue électrique",
           "etat": true,
-          "img": [
-            "/petit_electro/KB-6020.jpg"
-          ],
+          "img": ["/petit_electro/KB-6020.jpg"],
           "description": [
             "Couleur : Noir",
             "Thermostat réglables",
@@ -1280,9 +1115,7 @@
           "PVP": 109,
           "type": "Presse panini",
           "etat": true,
-          "img": [
-            "/petit_electro/RL-216.jpg"
-          ],
+          "img": ["/petit_electro/RL-216.jpg"],
           "description": [
             "Puissance 750 w",
             "Indicateurs lumineux d'alimentation et de disponibilité",
@@ -1297,9 +1130,7 @@
           "PVP": 149,
           "type": "Toaster electronique",
           "etat": true,
-          "img": [
-            "/petit_electro/RL-098.jpg"
-          ],
+          "img": ["/petit_electro/RL-098.jpg"],
           "description": [
             "Puissance 650-750 w",
             "Grille-pain cool touch à 2 tranches",
@@ -1316,9 +1147,7 @@
           "PVP": 109,
           "type": "Presse agrume",
           "etat": true,
-          "img": [
-            "/petit_electro/RL-868.jpg"
-          ],
+          "img": ["/petit_electro/RL-868.jpg"],
           "description": [
             "Puissance 40 w",
             "2 cônes dans un ensemble",
@@ -1330,10 +1159,7 @@
             "alimentation 230 v - 50 Hz"
           ]
         }
-        
       ]
-      
     }
-    
   }
 }

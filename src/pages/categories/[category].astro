@@ -5,16 +5,16 @@ import { products, categories } from "../../data";
 export async function getStaticPaths() {
   return categories.map((category) => {
     return {
-      params: { category },
+      params: { category: category },
       props: { productRanges: products[category] },
     };
   });
 }
 
 const { category } = Astro.params;
+console.log({ category });
 const { productRanges } = Astro.props;
 let allProducts = Object.values(productRanges).flat();
-console.log({ allProducts });
 ---
 
 <Layout categories={categories}>

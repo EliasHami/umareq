@@ -30,7 +30,7 @@ const { categories } = Astro.props;
         {
           categories.map((category) => (
             <li>
-              <a href={`categories/${category}`}>{category.toUpperCase()}</a>
+              <a href={`/categories/${category}`}>{category.toUpperCase()}</a>
             </li>
           ))
         }
