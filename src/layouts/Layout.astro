@@ -39,13 +39,7 @@ const { categories, displayNav = true } = Astro.props;
 
     <!-- Custom stlylesheet -->
     <link type="text/css" rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body style="display:None">
-    <Header />
-    {displayNav && <Navigation categories={categories} />}
-    <slot />
-    <Footer categories={categories} displayLinks={displayNav} />
-    <!-- <script>
+    <script>
       const isLogin = location.pathname === "/login";
       const currentHash = window.sessionStorage.getItem("currentHash");
       if (currentHash !== "689486176" && !isLogin) {
@@ -53,7 +47,13 @@ const { categories, displayNav = true } = Astro.props;
       } else {
         document.body.style.display = "block";
       }
-    </script> -->
+    </script>
+  </head>
+  <body style="display:None">
+    <Header />
+    {displayNav && <Navigation categories={categories} />}
+    <slot />
+    <Footer categories={categories} displayLinks={displayNav} />
     <script is:inline src="/libs/jquery.min.js"></script>
     <script is:inline src="/libs/bootstrap.min.js"></script>
     <script is:inline src="/libs/slick.min.js"></script>
