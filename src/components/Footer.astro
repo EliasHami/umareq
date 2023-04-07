@@ -1,5 +1,5 @@
 ---
-const { categories } = Astro.props;
+const { categories, displayLinks = true } = Astro.props;
 ---
 
 <div id="newsletter" class="section">
@@ -58,23 +58,24 @@ const { categories } = Astro.props;
         </div>
 
         <div class="clearfix visible-xs"></div>
-
-        <div class="col-md-3 col-xs-6">
-          <div class="footer">
-            <h3 class="footer-title">Liens rapides</h3>
-            <ul class="footer-links">
-              {
-                categories.map((category) => {
-                  return (
-                    <li>
-                      <a href={`/categories/${category}`}>{category}</a>
-                    </li>
-                  );
-                })
-              }
-            </ul>
-          </div>
-        </div>
+        {
+          displayLinks && (
+            <div class="col-md-3 col-xs-6">
+              <div class="footer">
+                <h3 class="footer-title">Liens rapides</h3>
+                <ul class="footer-links">
+                  {categories.map((category) => {
+                    return (
+                      <li>
+                        <a href={`/categories/${category}`}>{category}</a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          )
+        }
       </div>
     </div>
   </div>

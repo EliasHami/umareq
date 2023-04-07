@@ -2,7 +2,7 @@
 import Header from "../components/Header.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
-const { categories } = Astro.props;
+const { categories, displayNav = true } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -22,40 +22,38 @@ const { categories } = Astro.props;
     />
 
     <!-- Bootstrap -->
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="/src/styles/bootstrap.min.css"
-    />
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
 
     <!-- Slick -->
-    <link type="text/css" rel="stylesheet" href="/src/styles/slick.css" />
-    <link type="text/css" rel="stylesheet" href="/src/styles/slick-theme.css" />
+    <link type="text/css" rel="stylesheet" href="/css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="/css/slick-theme.css" />
 
     <!-- nouislider -->
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="/src/styles/nouislider.min.css"
-    />
+    <link type="text/css" rel="stylesheet" href="/css/nouislider.min.css" />
 
     <!-- Font Awesome Icon -->
-    <link
-      rel="stylesheet"
-      href="/src/styles/font-awesome/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css" />
 
     <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="/src/styles/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
 
     <!-- Custom stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="/src/styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
   </head>
-  <body>
+  <body style="display:None">
     <Header />
-    <Navigation categories={categories} />
+    {displayNav && <Navigation categories={categories} />}
     <slot />
-    <Footer categories={categories} />
+    <Footer categories={categories} displayLinks={displayNav} />
+    <script>
+      const isLogin = location.pathname === "/login";
+      const currentHash = window.sessionStorage.getItem("currentHash");
+      if (currentHash !== "689486176" && !isLogin) {
+        window.location.href = "/login";
+      } else {
+        document.body.style.display = "block";
+      }
+    </script>
     <script is:inline src="/libs/jquery.min.js"></script>
     <script is:inline src="/libs/bootstrap.min.js"></script>
     <script is:inline src="/libs/slick.min.js"></script>

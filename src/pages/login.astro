@@ -1,0 +1,82 @@
+---
+import { categories } from "../data";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout categories={categories} displayNav={false}>
+  <div class="section">
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h4>Login</h4>
+            </div>
+            <div class="card-body">
+              <form id="login-form">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    placeholder="Enter username"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block"
+                  >Login</button
+                >
+              </form>
+              <div
+                id="error"
+                class="text-center text-danger"
+                style="display:None;"
+              >
+                User or password incorrect !
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+<script>
+  String.prototype.hashCode = function () {
+    var hash = 0,
+      i,
+      chr;
+    if (this.length === 0) return hash;
+    for (i = 0; i < this.length; i++) {
+      chr = this.charCodeAt(i);
+      hash = (hash << 5) - hash + chr;
+      hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+  };
+
+  $(document).ready(function () {
+    $("form#login-form").submit(function (e) {
+      e.preventDefault();
+      const username = e.target[0].value;
+      const password = e.target[1].value;
+      const hash = (username + password).hashCode();
+      if (hash === 689486176) {
+        window.location.href = "/";
+        window.sessionStorage.setItem("currentHash", hash);
+      } else {
+        $("#error").show();
+      }
+    });
+  });
+</script>
