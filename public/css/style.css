@@ -468,6 +468,10 @@ textarea.input {
   color: #fff;
 }
 
+.header-links li a span {
+  font-size: 20px;
+}
+
 .header-links li a:hover {
   color: #0089cf;
 }
@@ -475,6 +479,11 @@ textarea.input {
 .header-links li i {
   color: #0089cf;
   margin-right: 5px;
+  font-size: 25px;
+}
+
+.header-links li img {
+  margin-bottom: 5px;
 }
 
 /*----------------------------*\
