@@ -46,15 +46,14 @@ const { categories, displayNav = true } = Astro.props;
     <slot />
     <Footer categories={categories} displayLinks={displayNav} />
     <script>
-      const isLogin = location.pathname === "/login";
+      const isLogin = location.pathname.includes("/login");
       const currentHash = window.sessionStorage.getItem("currentHash");
 
-      console.log({ isLogin, currentHash, pathname: location.pathname });
-      // if (currentHash !== "689486176" && !isLogin) {
-      //   window.location.href = "/login";
-      // } else {
-      //   document.body.style.display = "block";
-      // }
+      if (currentHash !== "689486176" && !isLogin) {
+        window.location.href = "/login";
+      } else {
+        document.body.style.display = "block";
+      }
     </script>
     <script is:inline src="/libs/jquery.min.js"></script>
     <script is:inline src="/libs/bootstrap.min.js"></script>
