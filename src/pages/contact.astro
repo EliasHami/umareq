@@ -1,0 +1,166 @@
+---
+import { categories, products } from "../data";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout categories={categories}>
+  <div id="breadcrumb" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="breadcrumb-tree">
+            <li><a href="/">Accueil</a></li>
+            <li class="active">Nous contacter</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 order-details">
+          <div class="section-title text-center">
+            <h3 class="title">Détail de votre commande</h3>
+          </div>
+          <div class="order-summary">
+            <div class="billing-details" id="formOrder">
+              <div class="form-group">
+                <input class="input" type="text" id="nom" placeholder="Nom" />
+              </div>
+              <div class="form-group">
+                <input
+                  class="input"
+                  type="text"
+                  id="prenom"
+                  placeholder="Prénom"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="input"
+                  type="email"
+                  id="email"
+                  placeholder="email"
+                />
+              </div>
+              <div class="form-group">
+                <select
+                  class="input-select product"
+                  data-index-product="0"
+                  id="product_0"
+                >
+                  {
+                    categories.map((category) => {
+                      const productRanges = products[category];
+
+                      return (
+                        <>
+                          {Object.entries(productRanges).map(
+                            ([productRange, products]) => {
+                              return (
+                                <optgroup
+                                  label={`${category} > ${productRange}`}
+                                >
+                                  {products.map((product) => {
+                                    return (
+                                      <option
+                                        value={product.id}
+                                        data-article-price={product.PVP}
+                                      >
+                                        {product.id}
+                                      </option>
+                                    );
+                                  })}
+                                </optgroup>
+                              );
+                            }
+                          )}
+                        </>
+                      );
+                    })
+                  }
+                </select>
+                &nbsp;Qte : <input
+                  class="input qte"
+                  data-index-qte="0"
+                  type="number"
+                  id="qte_0"
+                  min="1"
+                  max="100"
+                  style="width: 20%"
+                />
+                &nbsp;Prix: <span
+                  class="price"
+                  id="price_0"
+                  data-index-price="0">0</span
+                >
+                MAD
+              </div>
+            </div>
+            <a href="#" id="addArticle" style="color: #0089CF">
+              <span class="icon-plus"></span> Ajouter un autre article
+            </a>
+            <hr class="soften" />
+            <h4>
+              Prix total hors frais de livraison : <span
+                class="totalPrice"
+                style="color: orange">0 MAD</span
+              >
+            </h4>
+            <a href="#" class="primary-btn order-submit sendOrder">Envoyer</a>
+            <span class="error"></span>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="billing-details">
+            <div class="section-title">
+              <h3 class="title">Modalités de la livraison et du réglement</h3>
+            </div>
+            <div id="livraison">
+              <br />
+              <h3>Livraison et règlement</h3>
+              Les prix communiqués sur le présent site s’entendent hors frais de
+              livraison. Ces derniers dépendront des facteurs suivants :<br />
+              <ul>
+                <li>
+                  Destination de la livraison : les frais de livraison varient
+                  selon la distance entre la ville d'expédition et la ville de
+                  la livraison.
+                </li>
+                <li>
+                  Poids/ Taille : les frais de livraison varient en fonction du
+                  poids et volume du colis.
+                </li>
+                <li>
+                  Nombre d'articles : les frais varient selon le nombres
+                  d'articles qui sont contenus dans votre panier.
+                </li>
+              </ul>
+              <br />
+              <br />
+              <ul>
+                <li>
+                  Le prix précis vous sera communiqués lors de la commande.
+                </li>
+                <li>
+                  Le prix varient de 50 Dhs à 200 Dhs dépendamment de la nature
+                  du produit et de la distance.
+                </li>
+              </ul>
+              <span style="color: red"
+                >Pour information, les chèques sont interdits.</span
+              ><br />
+              <b
+                >Le règlement peut s’effectuer par anticipation avec une facture
+                clairement établie ou à la livraison.</b
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+<script is:inline src="libs/order.js"></script>
