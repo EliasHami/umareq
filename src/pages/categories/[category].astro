@@ -74,6 +74,7 @@ let allProducts = Object.values(productRanges).flat();
                     {Object.entries(productRanges)?.map(
                       ([productRange, products]) => {
                         const tabId = productRange.replaceAll(" ", "_");
+                        console.log({ products });
                         return (
                           <div id={`tab${tabId}`} class="tab-pane">
                             {products?.map((product) => {
@@ -110,31 +111,36 @@ let allProducts = Object.values(productRanges).flat();
                         );
                       }
                     )}
-                  </div>
-                  <div id="tabTout" class="tab-pane active">
-                    {allProducts?.map((product) => {
-                      return (
-                        <div class="col-md-4 col-xs-6">
-                          <a href={`/products/${product.id}`}>
-                            <div class="product">
-                              <div class="product-img">
-                                <img src={`/img/${product.img?.[0]}`} alt="" />
-                                <div class="product-label">
-                                  <span class="new">NEW</span>
+                    <div id="tabTout" class="tab-pane active">
+                      {allProducts?.map((product) => {
+                        return (
+                          <div class="col-md-4 col-xs-6">
+                            <a href={`/products/${product.id}`}>
+                              <div class="product">
+                                <div class="product-img">
+                                  <img
+                                    src={`/img/${product.img?.[0]}`}
+                                    alt=""
+                                  />
+                                  <div class="product-label">
+                                    <span class="new">NEW</span>
+                                  </div>
+                                </div>
+                                <div class="product-body">
+                                  <p class="product-category">{product.type}</p>
+                                  <h3 class="product-name">
+                                    <a href="#">{product.id}</a>
+                                  </h3>
+                                  <h4 class="product-price">
+                                    {product.PVP} MAD
+                                  </h4>
                                 </div>
                               </div>
-                              <div class="product-body">
-                                <p class="product-category">{product.type}</p>
-                                <h3 class="product-name">
-                                  <a href="#">{product.id}</a>
-                                </h3>
-                                <h4 class="product-price">{product.PVP} MAD</h4>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      );
-                    })}
+                            </a>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </div>
